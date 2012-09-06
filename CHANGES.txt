@@ -1,0 +1,6 @@
+0.0
+---
+
+-  Initial version was forked from OMCeVmembership, see
+   https://github.com/AnneGilles/OMCeVmembership
+

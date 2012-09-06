@@ -1,0 +1,13 @@
+*.egg-info/
+*.pyc
+*~
+*.db
+.DS_Store
+bin/
+include/
+lib/
+local
+combined.pdf
+fdf.fdf
+formoutput.pdf
+.coverage
