@@ -14,7 +14,7 @@ def generate_pdf(appstruct):
     (a datastructure received via formsubmission)
     and prepares and returns a PDF using pdftk
     """
-    DEBUG = True  # False
+    DEBUG = False
 
 #     _composer = 'Yes' if appstruct[
 #         'activity'].issuperset(['composer']) else 'Off'
@@ -166,7 +166,7 @@ that's it.. bye!""" % (
         )
 
     attachment = Attachment("foo.gpg", "application/gpg-encryption",
-                            unicode(encrypt_with_gnupg(u"foo to the bär!")))
+                            unicode(encrypt_with_gnupg(u"foo to the bar!")))
     # TODO: make attachment contents a .csv with the data supplied.
     message.attach(attachment)
 
