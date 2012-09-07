@@ -60,7 +60,7 @@ setup(name='C3SIntent',
       main = c3sintent:main
       """,
       paster_plugins=['pyramid'],
-      message_extractors={'.': [
+      message_extractors={'c3sintent': [
             ('**.py', 'lingua_python', None),
             ('**.pt', 'lingua_xml', None),
             ]},
