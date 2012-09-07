@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import unittest
 #from pyramid.config import Configurator
 from pyramid import testing
@@ -71,7 +73,6 @@ class TestViews(unittest.TestCase):
                 'address2': 'Address2',
                 'postCodeCity': 'Devilstown',
                 'email': 'email@example.com',
-                'phone': 'phone',
                 '_LOCALE_': 'en',
                 'country': 'AF',
                 'at_least_three_works': 'yes',
