@@ -53,7 +53,7 @@ setup(name='C3SIntent',
       packages=find_packages(),
       include_package_data=True,
       zip_safe=False,
-      test_suite='omcevmembership',
+      test_suite='c3sintent',
       install_requires=requires + test_requirements,
       entry_points="""\
       [paste.app_factory]
