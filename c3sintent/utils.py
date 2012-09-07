@@ -1,7 +1,8 @@
 # -*- coding: utf-8  -*-
+import os
 import subprocess
 from fdfgen import forge_fdf
-
+from c3sintent.gnupg_encrypt import encrypt_with_gnupg
 from pyramid_mailer.message import Message
 from pyramid_mailer.message import Attachment
 
@@ -16,20 +17,8 @@ def generate_pdf(appstruct):
     """
     DEBUG = False
 
-#     _composer = 'Yes' if appstruct[
-#         'activity'].issuperset(['composer']) else 'Off'
-#     _musician = 'Yes' if appstruct[
-#         'activity'].issuperset(['musician']) else 'Off'
-#     _lyricist = 'Yes' if appstruct[
-#         'activity'].issuperset(['lyricist']) else 'Off'
-#     _producer = 'Yes' if appstruct[
-#         'activity'].issuperset(['producer']) else 'Off'
-#     _dj = 'Yes' if appstruct[
-#         'activity'].issuperset(['dj']) else 'Off'
-
-#    print('---------------')
-#    print(appstruct)
-#    print('---------------')
+    my_fdf_filename = "custom.fdf"
+    my_pdf_filename = "custom.pdf"
 
 # here we gather all information from the supplied data to prepare pdf-filling
 
@@ -70,17 +59,20 @@ def generate_pdf(appstruct):
 
     fdf = forge_fdf("", fields, [], [], [])
 
-# write to file
+# write it to a file
 
-    my_fdf_filename = "fdf.fdf"
     fdf_file = open(my_fdf_filename, "w")
-    # fdf_file.write(fdf.encode('utf8'))
+
     if DEBUG:  # pragma: no cover
         print("== PDFTK: write fdf")
+
     fdf_file.write(fdf)
+
     if DEBUG:  # pragma: no cover
         print("== PDFTK: close fdf file")
     fdf_file.close()
+
+# process the PDF, fill in prepared data
 
     if DEBUG:  # pragma: no cover
         print("== PDFTK: fill_form & flatten")
@@ -90,7 +82,7 @@ def generate_pdf(appstruct):
             'pdftk',
             'pdftk/declaration-of-intent.pdf',  # input pdf with form fields
             'fill_form', my_fdf_filename,  # fill in values
-            'output', 'formoutput.pdf',  # output filename
+            'output', my_pdf_filename,  # output filename
             'flatten',  # make form read-only
 #            'verbose'  # be verbose?
             ])
@@ -99,33 +91,23 @@ def generate_pdf(appstruct):
         print("===== pdftk output ======")
         print(pdftk_output)
 
-
-#         os.unlink('formoutput.pdf')
-#         if DEBUG:  # pragma: no cover
-#             print("== PDFTK: success: deleted formoutput.pdf")
-#     except OSError, ose:  # pragma: no cover
-#         print ose
-#         print("== PDFTK: file not found while trying to delete")
-#     if DEBUG:  # pragma: no cover
-#         print("== PDFTK: delete fdf with user data: " + my_fdf_filename)
-
-#    try:
-#        os.unlink(my_fdf_filename)
-#        if DEBUG:  # pragma: no cover
-#            print("== PDFTK: success: deleted fdf file")
-#    except:  # pragma: no cover
-#        print("== PDFTK: error while trying to delete fdf file")
-    # return a pdf file
+# return a pdf file
     from pyramid.response import Response
     response = Response(content_type='application/pdf')
-    response.app_iter = open("formoutput.pdf", "r")
-    return response
+    response.app_iter = open(my_pdf_filename, "r")
 
-from c3sintent.gnupg_encrypt import encrypt_with_gnupg
+# remove the customized fdf and pdf
+    try:
+        os.unlink(my_fdf_filename)
+        os.unlink(my_pdf_filename)
+    except:
+        print('error while unlinking pdf or fdf')
+        pass
+
+    return response
 
 
 def accountant_mail(appstruct):
-
     unencrypted = u"""
 Yay!
 we got a declaration of intent through the form: \n
