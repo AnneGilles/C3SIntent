@@ -27,9 +27,9 @@ def generate_pdf(appstruct):
 #     _dj = 'Yes' if appstruct[
 #         'activity'].issuperset(['dj']) else 'Off'
 
-    print('---------------')
-    print(appstruct)
-    print('---------------')
+#    print('---------------')
+#    print(appstruct)
+#    print('---------------')
 
 # here we gather all information from the supplied data to prepare pdf-filling
 
