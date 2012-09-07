@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: C3SIntent 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-09-07 08:28+0200\n"
+"POT-Creation-Date: 2012-09-07 14:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,84 +17,83 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:77 c3sintent/views.py:77
+#: c3sintent/views.py:77
 msgid "Full Name"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:78 c3sintent/views.py:78
+#: c3sintent/views.py:78
 msgid "composer"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:79 c3sintent/views.py:79
+#: c3sintent/views.py:79
 msgid "lyricist"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:80 c3sintent/views.py:80
+#: c3sintent/views.py:80
 msgid "musician"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:81 c3sintent/views.py:81
+#: c3sintent/views.py:81
 msgid "music producer"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:82 c3sintent/views.py:82
+#: c3sintent/views.py:82
 msgid "remixer"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:83 c3sintent/views.py:83
+#: c3sintent/views.py:83
 msgid "DJ"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:92 c3sintent/views.py:92
+#: c3sintent/views.py:92
 msgid "Yes"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:93 c3sintent/views.py:93
+#: c3sintent/views.py:93
 msgid "No"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:104 c3sintent/views.py:104
+#: c3sintent/views.py:104
 msgid "I am a member of a collecting society."
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:109 c3sintent/views.py:109
+#: c3sintent/views.py:109
 msgid "Email"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:112 c3sintent/views.py:112
+#: c3sintent/views.py:112
 msgid "Street & No."
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:115 c3sintent/views.py:115
+#: c3sintent/views.py:115
 msgid "address cont'd"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:117 c3sintent/views.py:117
+#: c3sintent/views.py:117
 msgid "Post Code & City"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:119 c3sintent/views.py:119
+#: c3sintent/views.py:119
 msgid "Country"
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:125 c3sintent/views.py:125
+#: c3sintent/views.py:125
 msgid "I have read and understood the text of the declaration of intent."
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:141 c3sintent/views.py:141
+#: c3sintent/views.py:141
 msgid ""
 "I have taken note of the Data Protection Declaration which is part of this "
 "text and can be read separately at http://www.c3s.cc/disclaimer-en.html and "
 "agree with it. I know that I may revoke this consent at any time."
 msgstr ""
 
-#: build/lib.linux-x86_64-2.6/c3sintent/views.py:156 c3sintent/views.py:156
+#: c3sintent/views.py:156
 msgid "Submit"
 msgstr ""
 
 #. Default: Declaration of Intent to join the Cultural Commons Collecting Society
 #. (C3S)
-#: build/lib.linux-x86_64-2.6/c3sintent/templates/intent.pt:14
 #: c3sintent/templates/intent.pt:14
 msgid "membership-form"
 msgstr ""
@@ -104,7 +103,6 @@ msgstr ""
 #. level of support and acceptance for the time when we commence our business
 #. operation. Facebook followers are not sufficient – we need some additional
 #. assistance.
-#: build/lib.linux-x86_64-2.6/c3sintent/templates/intent.pt:17
 #: c3sintent/templates/intent.pt:17
 msgid "intent-form-intro-1"
 msgstr ""
@@ -116,7 +114,6 @@ msgstr ""
 #. society – a transfer is possible, even if it may be a lengthy process. At the
 #. moment, you merely confirm that you seriously consider to become a member of the
 #. new C3S. Your signature does not constitute a binding agreement to join.
-#: build/lib.linux-x86_64-2.6/c3sintent/templates/intent.pt:20
 #: c3sintent/templates/intent.pt:20
 msgid "intent-form-intro-3"
 msgstr ""
@@ -127,7 +124,6 @@ msgstr ""
 #. music. We are happy about professionals or semi-professionals, but amateur
 #. musicians and prospective artists will also find their home in the C3S – even if
 #. you have only just compiled your first remixes or mashups.
-#: build/lib.linux-x86_64-2.6/c3sintent/templates/intent.pt:24
 #: c3sintent/templates/intent.pt:24
 msgid "intent-form-intro-4"
 msgstr ""
@@ -136,7 +132,6 @@ msgstr ""
 #. whether you really want to become a member. If not, your declaration will be
 #. deleted. It will also be deleted if you have second thoughts and notify us in
 #. writing that you wish to withdraw your declaration.
-#: build/lib.linux-x86_64-2.6/c3sintent/templates/intent.pt:27
 #: c3sintent/templates/intent.pt:27
 msgid "intent-form-intro-5"
 msgstr ""
@@ -149,7 +144,6 @@ msgstr ""
 #. the registered association OpenMusicContest.org as representative of the C3S
 #. foundation initiative, according to the requirements of the Federal Data
 #. Protection Act.
-#: build/lib.linux-x86_64-2.6/c3sintent/templates/intent.pt:30
 #: c3sintent/templates/intent.pt:30
 msgid "intent-form-intro-6"
 msgstr ""
@@ -161,26 +155,22 @@ msgstr ""
 #. in touch with you, should you wish to join the collecting society. You can read
 #. the details about how we handle your data (Data Protection Declaration)
 #. separately on our website at
-#: build/lib.linux-x86_64-2.6/c3sintent/templates/intent.pt:33
 #: c3sintent/templates/intent.pt:33
 msgid "intent-form-intro-7"
 msgstr ""
 
 #. Default: <dynamic element>
-#: build/lib.linux-x86_64-2.6/c3sintent/templates/intent.pt:36
 #: c3sintent/templates/intent.pt:36
 msgid "intent-form-disclaimer-link"
 msgstr ""
 
 #. Default: At first, please get information about the C3S and its aims, and then
 #. we can get going!
-#: build/lib.linux-x86_64-2.6/c3sintent/templates/intent.pt:39
 #: c3sintent/templates/intent.pt:39
 msgid "intent-form-reading-instructions"
 msgstr ""
 
 #. Default: Please answer all questions:
-#: build/lib.linux-x86_64-2.6/c3sintent/templates/intent.pt:42
 #: c3sintent/templates/intent.pt:42
 msgid "intent-form-answer-all"
 msgstr ""

@@ -153,7 +153,7 @@ that's it.. bye!""" % (
         unicode(appstruct['country']),
         unicode(appstruct['at_least_three_works']),
         unicode(appstruct['member_of_colsoc']),
-        unicode(appstruct['understood_declaration'][0]),
+        unicode(appstruct['understood_declaration']),
         unicode(appstruct['consider_joining']),
         unicode(appstruct['noticed_dataProtection']),
         )
