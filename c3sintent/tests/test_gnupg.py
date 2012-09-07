@@ -35,7 +35,7 @@ class TestGnuPG(unittest.TestCase):
     def test_encrypt_with_gnupg_w_umlauts(self):
         from c3sintent.gnupg_encrypt import encrypt_with_gnupg
         result = encrypt_with_gnupg(u'füöß')
-        #print ("the result: " + str(result))
+        print ("the result: " + str(result))
         self.assertTrue('-----BEGIN PGP MESSAGE-----' in str(result))
         self.assertTrue('-----END PGP MESSAGE-----' in str(result))
 
