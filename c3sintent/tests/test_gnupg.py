@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import unittest
 import os
 from pyramid import testing
@@ -25,6 +28,13 @@ class TestGnuPG(unittest.TestCase):
     def test_encrypt_with_gnupg(self):
         from c3sintent.gnupg_encrypt import encrypt_with_gnupg
         result = encrypt_with_gnupg('foo')
+        #print ("the result: " + str(result))
+        self.assertTrue('-----BEGIN PGP MESSAGE-----' in str(result))
+        self.assertTrue('-----END PGP MESSAGE-----' in str(result))
+
+    def test_encrypt_with_gnupg_w_umlauts(self):
+        from c3sintent.gnupg_encrypt import encrypt_with_gnupg
+        result = encrypt_with_gnupg(u'füöß')
         #print ("the result: " + str(result))
         self.assertTrue('-----BEGIN PGP MESSAGE-----' in str(result))
         self.assertTrue('-----END PGP MESSAGE-----' in str(result))
