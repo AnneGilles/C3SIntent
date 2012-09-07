@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.net
+
+[C3SIntent.POT]
+file_filter = translations/C3Sintent.POT/<lang>.po
+source_file = c3sintent/locale/C3Sintent.pot
+source_lang = en
+trans.de = c3sintent/locale/de/LC_MESSAGES/C3Sintent.po
+type = PO
