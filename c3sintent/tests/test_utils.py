@@ -46,8 +46,15 @@ class TestUtilities(unittest.TestCase):
             'name': u'Anne Gilles',
             'address1': u'Sonnenstraße 23',
             'address2': u'12345 Müsterstädt',
-            'phone': u'0123 456789',
-            'email': u'foo@example.com'
+            'postCodeCity': 'postCodeCity',
+            'email': u'foo@example.com',
+            'country': 'country',
+            'activity': set([u'composer', u'lyricist', u'dj']),
+            'at_least_three_works': 'at_least_three_works',
+            'member_of_colsoc': 'member_of_colsoc',
+            'understood_declaration': 'understood_declaration',
+            'consider_joining': 'consider_joining',
+            'noticed_dataProtection': 'noticed_dataProtection',
             }
 
         # a skipTest iff pdftk is not installed
