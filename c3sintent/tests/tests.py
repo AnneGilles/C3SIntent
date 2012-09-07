@@ -69,6 +69,7 @@ class TestViews(unittest.TestCase):
                 'name': 'SurName LastName',
                 'address1': 'Address1',
                 'address2': 'Address2',
+                'postCodeCity': 'Devilstown',
                 'email': 'email@example.com',
                 'phone': 'phone',
                 '_LOCALE_': 'en',
@@ -80,6 +81,7 @@ class TestViews(unittest.TestCase):
                 'noticed_dataProtection': 'yes'
                 }
             )
+#        print(dir(request.params))
         mailer = get_mailer(request)
         # skip test iff pdftk is not installed
         import subprocess
