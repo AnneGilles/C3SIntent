@@ -42,7 +42,8 @@ class FunctionalTests(unittest.TestCase):
 #     def test_lang_de(self):
 #         """load the front page, check german string exists"""
 #         res = self.testapp.get('/?_LOCALE_=de', status=200)
-#         self.failUnless('Willkommen bei der OpenMusicContest.org' in res.body)
+#         self.failUnless(
+#             'Willkommen bei der OpenMusicContest.org' in res.body)
 
 #     def test_no_cookies(self):
 #         """load the front page, check default english string exists"""
@@ -75,4 +76,8 @@ class FunctionalTests(unittest.TestCase):
     def test_form_lang_de(self):
         """load the join form, check german string exists"""
         res = self.testapp.get('/?_LOCALE_=de', status=200)
-        self.failUnless('Bitte fülle das Formular aus' in res.body)
+
+        # test for german translation of template text (lingua_xml)
+        self.failUnless('Bei Antragstellung zur Zulassung als' in res.body)
+        # test for german translation of form field label (lingua_python)
+        self.failUnless('Texter' in res.body)
