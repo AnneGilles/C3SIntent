@@ -74,6 +74,7 @@ class TestViews(unittest.TestCase):
                 'postCodeCity': 'Devilstown',
                 'email': 'email@example.com',
                 '_LOCALE_': 'en',
+                'activity': set([u'composer', u'dj']),
                 'country': 'AF',
                 'at_least_three_works': 'yes',
                 'member_of_colsoc': 'yes',
@@ -90,8 +91,15 @@ class TestViews(unittest.TestCase):
         try:
             res = subprocess.check_call(["which", "pdftk"])
             if res == 0:
-                # go ahead with the tests
+
+                # go ahead with the tests:
+                # feed the test data to the form/view function
                 result = declare_intent(request)
+
+                # at this point -if the test fails- we cannot be sure, whether
+                # we actually got the PDF or the form we tried to submit
+                # failed validation, e.g. because the requirements weren't
+                # fulfilled. let's see...
 
                 self.assertEquals(result.content_type,
                                   'application/pdf')
@@ -107,11 +115,14 @@ class TestViews(unittest.TestCase):
                 import slate
                 content = slate.PDF(resultstring)
 
-                self.assertTrue('Surname LastName' in str(content))
+                # uncomment to the the text in the PDF produced
+                #print(content)
+
+                # test if text shows up as expected
+                self.assertTrue('SurName LastName' in str(content))
                 self.assertTrue('Address1' in str(content))
                 self.assertTrue('Address2' in str(content))
                 self.assertTrue('email@example.com' in str(content))
-                self.assertTrue('phone' in str(content))
 #                self.assertTrue('Afgahnistan' in str(content))
 
                 # check outgoing mails

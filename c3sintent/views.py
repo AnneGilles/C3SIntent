@@ -58,8 +58,8 @@ def declare_intent(request):
 
     locale_name = get_locale_name(request)
 
-    #    if DEBUG:  # pragma: no cover
-    print "-- locale_name: " + str(locale_name)
+    if DEBUG:  # pragma: no cover
+        print "-- locale_name: " + str(locale_name)
 
     # set default of Country select widget according to locale
     LOCALE_COUNTRY_MAPPING = {
@@ -162,8 +162,8 @@ def declare_intent(request):
         controls = request.POST.items()
         try:
             appstruct = form.validate(controls)
-            #if DEBUG:  #pragma: no cover
-            print(appstruct)
+            if DEBUG:  #pragma: no cover
+                print(appstruct)
         except ValidationFailure, e:
             print(e)
             return{'form': e.render(), }
