@@ -1,7 +1,7 @@
 [main]
 host = https://www.transifex.net
 
-[C3SIntent.POT]
+[C3Sintent.POT]
 file_filter = translations/C3Sintent.POT/<lang>.po
 source_file = c3sintent/locale/C3Sintent.pot
 source_lang = en

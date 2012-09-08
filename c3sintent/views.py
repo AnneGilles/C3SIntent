@@ -29,7 +29,7 @@ c3sintent_templates = resource_filename('c3sintent', 'templates')
 
 my_search_path = (deform_templates, c3sintent_templates)
 
-_ = TranslationStringFactory('C3SIntent')
+_ = TranslationStringFactory('C3Sintent')
 
 
 def translator(term):
@@ -85,8 +85,7 @@ def declare_intent(request):
         activity = colander.SchemaNode(
             deform.Set(),
             title=_(
-                u'Yes, I am musically active as a '
-                + '(multiple selection possible)'),
+                u'Yes, I am musically active as a (multiple selection possible)'),
             widget=deform.widget.CheckboxChoiceWidget(values=type_of_creator))
 
         yes_no = (('yes', _('Yes')),
@@ -95,8 +94,7 @@ def declare_intent(request):
         at_least_three_works = colander.SchemaNode(
             colander.String(),
             title=_(
-                'I have been the (co-)creator of at least three titles in one'
-                + ' of the functions mentioned under (1)'),
+                'I have been the (co-)creator of at least three titles in one of the functions mentioned under (1)'),
             validator=colander.OneOf([x[0] for x in yes_no]),
             widget=deform.widget.RadioChoiceWidget(values=yes_no))
         member_of_colsoc = colander.SchemaNode(
@@ -134,7 +132,7 @@ def declare_intent(request):
                     + 'be notified via e-mail about its foundation.'),
 #            validator=colander.OneOf([x[0] for x in yes_no]),
             widget=deform.widget.CheckboxChoiceWidget(
-                values=(('yes', 'Yes'),)),
+                values=(('yes', _('Yes')),)),
             )
         noticed_dataProtection = colander.SchemaNode(
             colander.String(),
@@ -144,7 +142,7 @@ def declare_intent(request):
                     'I know that I may revoke this consent at any time.'),
 #            validator=colander.OneOf([x[0] for x in yes_no]),
             widget=deform.widget.CheckboxChoiceWidget(
-                values=(('yes', 'Yes'),)),
+                values=(('yes', _('Yes')),)),
             )
         _LOCALE_ = colander.SchemaNode(colander.String(),
                                        widget=deform.widget.HiddenWidget(),

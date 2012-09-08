@@ -36,9 +36,9 @@ test_requirements = [
 if sys.version_info[:3] < (2, 5, 0):
     requires.append('pysqlite')
 
-setup(name='C3SIntent',
+setup(name='C3Sintent',
       version='0.1',
-      description='C3SIntent',
+      description='Declaration of Intent to join C3S (form, PDF, email)',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
         "Programming Language :: Python",
