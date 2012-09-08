@@ -4,7 +4,7 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n" 
       metal:use-macro="base"
-      i18n:domain="C3sintent">
+      i18n:domain="C3Sintent">
   <tal:block metal:fill-slot="deform-js-css">
     <link rel="stylesheet" href="${request.static_url('c3sintent:static/deform/form.css')}" type="text/css" media="screen" charset="utf-8" />
     <script type="text/javascript" src="/static/deform/jquery-1.4.2.min.js"></script>
@@ -14,6 +14,10 @@
     <h1 i18n:translate="membership-form">Declaration of Intent to join the Cultural Commons Collecting Society (C3S)</h1>
   </tal:block>
   <tal:block metal:fill-slot="bottom">
+    <p style="text-align:right;">
+      <a href="/?_LOCALE_=en"><img src="static/images/en.png" title="English"></a>
+      <a href="/?_LOCALE_=de"><img src="static/images/de.png" title="Deutsch"></a>
+    </p>
     <p i18n:translate="intent-form-intro-1">
       When we submit our application for approval as a collecting society at the German Patent and Trademark Office, we must be able to prove the anticipated level of support and acceptance for the time when we commence our business operation. Facebook followers are not sufficient – we need some additional assistance.
     </p>
@@ -28,7 +32,7 @@ You are allowed to currently be a member of a different collecting society – a
       After the C3S has been founded, we will use your data to ask you whether you really want to become a member. If not, your declaration will be deleted. It will also be deleted if you have second thoughts and notify us in writing that you wish to withdraw your declaration.
     </p>
     <p i18n:translate="intent-form-intro-6">
-      In order to prevent falsifications, we will ask you not only for your name, but also for your e-mail and postal addresses, as it is done in petitions, too. Of course we will only use your data for the application to the  German Patent and Trademark Office and will neither pass them on to third parties, nor use them for other purposes, or publish them. They will be stored in Germany by the registered association OpenMusicContest.org as representative of the C3S foundation initiative, according to the requirements of the Federal Data Protection Act. 
+      In order to prevent falsifications, we will ask you not only for your name, but also for your e-mail and postal addresses, as it is done in petitions, too. Of course we will only use your data for the application to the German Patent and Trademark Office and will neither pass them on to third parties, nor use them for other purposes, or publish them. They will be stored in Germany by the registered association OpenMusicContest.org as representative of the C3S foundation initiative, according to the requirements of the Federal Data Protection Act. 
     </p>
     <p i18n:translate="intent-form-intro-7">
 By sending an e-mail to data@c3s.cc you may order your data to be deleted at any time, and without giving reasons. Upon request to the same address, you may also ask for information about the data we have stored about you. However, a deletion of your data will have the result that we can not get in touch with you, should you wish to join the collecting society. You can read the details about how we handle your data (Data Protection Declaration) separately on our website at
@@ -40,9 +44,7 @@ By sending an e-mail to data@c3s.cc you may order your data to be deleted at any
       At first, please get information about the C3S and its aims, and then we can get going!
     </p>
     <p i18n:translate="intent-form-answer-all">
-
       Please answer all questions:
-
     </p>
     <div id="form" tal:content="structure form"/>
     <strong tal:repeat="message request.session.pop_flash()">

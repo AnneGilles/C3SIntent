@@ -18,7 +18,7 @@
   <div id="wrap">
     <div id="top">
       <div class="top align-center">
-        <div><img src="${request.static_url('c3sintent:static/c3s.logo.png')}" width="340" height="60" alt="C3S Declaration of Intent"/></div>
+        <div><img src="${request.static_url('c3sintent:static/logo_horiz_w700.png')}" alt="C3S Declaration of Intent"/></div>
       </div>
     </div>
     <div id="middle">
@@ -34,8 +34,14 @@
       </div>
     </div>
   </div>
-  <div id="footer">
-    <div class="footer">&copy; Copyright 2012, OpenMusicContest.org e.V.</div>
+  <div id="footer" style="height:50px;padding-top:10px">
+    <div class="footer">&copy; Copyright 2012, OpenMusicContest.org e.V. &nbsp; &nbsp;
+      <a target="_blank" style="text-decoration:none; color:black; font-size:66%" href="https://www.transifex.com/projects/p/C3SIntent/resource/POT/" 
+	 title="Want more langages? Help us translate on Transifex.com">
+	<img border="0" src="https://www.transifex.com/projects/p/C3Sintent/resource/POT/chart/image_png" style="vertical-align: middle;"/>  &nbsp; &nbsp;
+	<img border="0" src="https://ds0k0en9abmn1.cloudfront.net/static/charts/images/tx-logo-micro.646b0065fce6.png" style="vertical-align: middle;"/>
+      </a>
+    </div>
   </div>
 	<tal:block metal:define-slot="deform-load"></tal:block>
 </body>
