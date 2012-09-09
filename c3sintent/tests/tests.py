@@ -68,10 +68,12 @@ class TestViews(unittest.TestCase):
         request = testing.DummyRequest(
             post={
                 'submit': True,
-                'name': 'SurName LastName',
+                'firstname': 'FirstName',
+                'lastname': 'LastName',
                 'address1': 'Address1',
                 'address2': 'Address2',
-                'postCodeCity': 'Devilstown',
+                'postCode': '12345',
+                'city': 'Devilstown',
                 'email': 'email@example.com',
                 '_LOCALE_': 'en',
                 'activity': set([u'composer', u'dj']),
@@ -105,7 +107,7 @@ class TestViews(unittest.TestCase):
                                   'application/pdf')
                 #print("size of pdf: " + str(len(result.body)))
                 # check pdf size
-                self.assertTrue(81000 > len(result.body) > 78000)
+                self.assertTrue(83000 > len(result.body) > 78000)
 
                 # check pdf contents
                 content = ""
@@ -119,7 +121,8 @@ class TestViews(unittest.TestCase):
                 #print(content)
 
                 # test if text shows up as expected
-                self.assertTrue('SurName LastName' in str(content))
+                self.assertTrue('FirstName' in str(content))
+                self.assertTrue('LastName' in str(content))
                 self.assertTrue('Address1' in str(content))
                 self.assertTrue('Address2' in str(content))
                 self.assertTrue('email@example.com' in str(content))

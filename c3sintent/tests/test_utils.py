@@ -43,10 +43,12 @@ class TestUtilities(unittest.TestCase):
         from c3sintent.views import generate_pdf
 
         mock_appstruct = {
-            'name': u'Anne Gilles',
+            'firstname': u'Anne',
+            'lastname': u'Gilles',
             'address1': u'Sonnenstraße 23',
             'address2': u'12345 Müsterstädt',
-            'postCodeCity': 'postCodeCity',
+            'postCode': '12345',
+            'city': 'City',
             'email': u'foo@example.com',
             'country': 'country',
             'activity': set([u'composer', u'lyricist', u'dj']),
@@ -61,16 +63,17 @@ class TestUtilities(unittest.TestCase):
         import subprocess
         from subprocess import CalledProcessError
         try:
-            res = subprocess.check_call(["which", "pdftk"], stdout=None)
+            res = subprocess.check_call(
+                ["which", "pdftk"], stdout=None)
             if res == 0:
                 # go ahead with the tests
                 result = generate_pdf(mock_appstruct)
 
                 self.assertEquals(result.content_type,
                                   'application/pdf')
-                print("size of pdf: " + str(len(result.body)))
+                #print("size of pdf: " + str(len(result.body)))
                 # check pdf size
-                self.assertTrue(81000 > len(result.body) > 78000)
+                self.assertTrue(83000 > len(result.body) > 78000)
 
                 # TODO: check pdf for contents
 
@@ -85,10 +88,12 @@ class TestUtilities(unittest.TestCase):
         from c3sintent.utils import accountant_mail
         my_appstruct = {
             'activity': ['composer', 'dj'],
-            'name': 'John Doe',
+            'firstname': 'John',
+            'lastname': 'Doe',
             'address1': 'In the Middle',
             'address2': 'Of Nowhere',
-            'postCodeCity': '12345 Town',
+            'postCode': '12345',
+            'city': 'Town',
             'email': 'john@example.com',
             'country': 'af',
             'at_least_three_works': 'yes',

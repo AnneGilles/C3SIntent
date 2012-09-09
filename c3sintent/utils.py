@@ -23,10 +23,12 @@ def generate_pdf(appstruct):
 # here we gather all information from the supplied data to prepare pdf-filling
 
     fields = [
-        ('Name', appstruct['name']),
+        ('FirstName', appstruct['firstname']),
+        ('LastName', appstruct['lastname']),
         ('streetNo', appstruct['address1']),
         ('address2', appstruct['address2']),
-        ('postCodeCity', appstruct['postCodeCity']),
+        ('postCode', appstruct['postCode']),
+        ('city', appstruct['city']),
         ('email', appstruct['email']),
         ('country', appstruct['country']),
         ('composer',
@@ -107,15 +109,45 @@ def generate_pdf(appstruct):
     return response
 
 
+def generate_csv(appstruct):
+    """
+    returns a csv with the relevant data
+    to ease import of new data sets
+    """
+    from datetime import date
+    import tempfile
+    # format:
+    # date; place; signature; lastname; surname; email; streetNo; address2;
+    # postCodeCity; country; composer; lyricist; musician; producer; remixer;
+    # dj; 3works; member_colsoc; read_all; contact; dataProtection
+
+    csv = tempfile.TemporaryFile()
+    csv.write(u"%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s") % (
+        date.today().strftime("%Y-%m-%d"),  # date, e.g. 2012-09-02
+        '',  # #                           # place of signature
+        '',  # #                           # has signature
+        unicode(appstruct['name']),  # #    # lastname
+        unicode(appstruct['name']),  # #    # surname
+        unicode(appstruct['address1']),  # ## street & no
+        unicode(appstruct['address2']),  # ## address cont'd
+        unicode(appstruct['email']),  # #   # email
+        unicode(appstruct['country']),  # # # country
+        unicode(appstruct[''])
+        )
+    return str(csv.read())
+
+
 def accountant_mail(appstruct):
     unencrypted = u"""
 Yay!
 we got a declaration of intent through the form: \n
-name:         \t\t %s
+firstname:    \t\t %s
+lastname:     \t\t %s
 email:        \t\t %s
-streetNo:     \t\t %s
+street & no:  \t\t %s
 address2:     \t\t %s
-postCodeCity: \t\t %s
+postcode:     \t\t %s
+city:         \t\t %s
 country:      \t\t %s
 
 activities:   \t\t %s
@@ -127,11 +159,13 @@ consider joining     \t %s
 noticed data protection: \t %s
 
 that's it.. bye!""" % (
-        unicode(appstruct['name']),
+        unicode(appstruct['firstname']),
+        unicode(appstruct['lastname']),
         unicode(appstruct['email']),
         unicode(appstruct['address1']),
         unicode(appstruct['address2']),
-        unicode(appstruct['postCodeCity']),
+        unicode(appstruct['postCode']),
+        unicode(appstruct['city']),
         unicode(appstruct['country']),
         unicode(appstruct['at_least_three_works']),
         unicode(appstruct['member_of_colsoc']),

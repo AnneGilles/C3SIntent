@@ -65,9 +65,9 @@ class FunctionalTests(unittest.TestCase):
         res = self.testapp.get('/?_LOCALE_=en', status=200)
 
         form = res.form
-        print(form.fields)
+        #print(form.fields)
         #print(form.fields.values())
-        form['name'] = 'John Doe'
+        form['firstname'] = 'John'
         form['address2'] = 'some address part'
         res2 = form.submit('submit')
         self.failUnless(
