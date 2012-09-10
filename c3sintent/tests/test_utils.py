@@ -74,7 +74,7 @@ class TestUtilities(unittest.TestCase):
                                   'application/pdf')
                 #print("size of pdf: " + str(len(result.body)))
                 # check pdf size
-                self.assertTrue(83000 > len(result.body) > 78000)
+                self.assertTrue(100000 > len(result.body) > 78000)
 
                 # TODO: check pdf for contents
 
@@ -121,7 +121,7 @@ class TestUtilities(unittest.TestCase):
                                   'application/pdf')
                 #print("size of pdf: " + str(len(result.body)))
                 # check pdf size
-                self.assertTrue(87000 > len(result.body) > 78000)
+                self.assertTrue(100000 > len(result.body) > 78000)
 
                 # TODO: check pdf for contents
 

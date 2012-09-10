@@ -1,5 +1,6 @@
 # -*- coding: utf-8  -*-
 import os
+import tempfile
 import subprocess
 from fdfgen import forge_fdf
 from c3sintent.gnupg_encrypt import encrypt_with_gnupg
@@ -17,8 +18,8 @@ def generate_pdf(appstruct):
     """
     DEBUG = False
 
-    my_fdf_filename = "custom.fdf"
-    my_pdf_filename = "custom.pdf"
+    fdf_file = tempfile.NamedTemporaryFile()
+    pdf_file = tempfile.NamedTemporaryFile()
 
     declaration_pdf_de = "pdftk/absichtserklaerung.pdf"
     declaration_pdf_en = "pdftk/declaration-of-intent.pdf"
@@ -76,16 +77,11 @@ def generate_pdf(appstruct):
 
 # write it to a file
 
-    fdf_file = open(my_fdf_filename, "w")
-
     if DEBUG:  # pragma: no cover
-        print("== PDFTK: write fdf")
+        print("== prepare: write fdf")
 
     fdf_file.write(fdf)
-
-    if DEBUG:  # pragma: no cover
-        print("== PDFTK: close fdf file")
-    fdf_file.close()
+    fdf_file.seek(0)  # rewind to beginning
 
 # process the PDF, fill in prepared data
 
@@ -96,11 +92,12 @@ def generate_pdf(appstruct):
     pdftk_output = subprocess.call([
             'pdftk',
             pdf_to_be_used,  # input pdf with form fields
-            'fill_form', my_fdf_filename,  # fill in values
-            'output', my_pdf_filename,  # output filename
-            'flatten',  # make form read-only
+            'fill_form', fdf_file.name,  # fill in values
+            'output', pdf_file.name,  # output file
+#            'flatten',  # make form read-only
 #            'verbose'  # be verbose?
             ])
+    pdf_file.seek(0)
 
     if DEBUG:  # pragma: no cover
         print("===== pdftk output ======")
@@ -109,15 +106,8 @@ def generate_pdf(appstruct):
 # return a pdf file
     from pyramid.response import Response
     response = Response(content_type='application/pdf')
-    response.app_iter = open(my_pdf_filename, "r")
-
-# remove the customized fdf and pdf
-    try:
-        os.unlink(my_fdf_filename)
-        os.unlink(my_pdf_filename)
-    except:  # pragma: no cover
-        print('error while unlinking pdf or fdf')
-        pass
+    pdf_file.seek(0)  # rewind to beginning
+    response.app_iter = open(pdf_file.name, "r")
 
     return response
 
@@ -128,7 +118,6 @@ def generate_csv(appstruct):
     to ease import of new data sets
     """
     from datetime import date
-    import tempfile
     # format:
     # date; place; signature; firstname; lastname; email; streetNo; address2;
     # postCode; city; country; composer; lyricist; musician; producer; remixer;
@@ -137,7 +126,7 @@ def generate_csv(appstruct):
     csv = tempfile.TemporaryFile()
     csv.write(
         (u"%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s") % (
-            date.today().strftime("%Y-%m-%d"),  # date, e.g. 2012-09-02
+            date.today().strftime("%Y-%m-%d"),  # e.g. 2012-09-02
             'unknown',  # #                           # place of signature
             'pending...',  # #                           # has signature
             unicode(appstruct['firstname']),  # #    # lastname
