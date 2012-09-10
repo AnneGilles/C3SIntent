@@ -103,7 +103,7 @@ class TestUtilities(unittest.TestCase):
             'noticed_dataProtection': 'yes'
             }
         result = generate_csv(my_appstruct)
-        print(result)
+        #print(result)
         from datetime import date
         today = date.today().strftime("%Y-%m-%d")
         #print(today)
