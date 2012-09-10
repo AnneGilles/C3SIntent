@@ -58,6 +58,15 @@ def declare_intent(request):
 
     locale_name = get_locale_name(request)
 
+    # check if user clicked on language symbol to have page translated
+    #print("request.query_string: " + str(request.query_string))
+    from pyramid.httpexceptions import HTTPFound
+    if request.query_string == '_LOCALE_=%s' % (locale_name):
+        # set language cookie
+        request.response.set_cookie('_LOCALE_', locale_name)
+        return HTTPFound(location=request.route_url('intent'),
+                         headers=request.response.headers)
+
     if DEBUG:  # pragma: no cover
         print "-- locale_name: " + str(locale_name)
 
