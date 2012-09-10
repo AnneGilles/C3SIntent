@@ -117,23 +117,40 @@ def generate_csv(appstruct):
     from datetime import date
     import tempfile
     # format:
-    # date; place; signature; lastname; surname; email; streetNo; address2;
-    # postCodeCity; country; composer; lyricist; musician; producer; remixer;
+    # date; place; signature; firstname; lastname; email; streetNo; address2;
+    # postCode; city; country; composer; lyricist; musician; producer; remixer;
     # dj; 3works; member_colsoc; read_all; contact; dataProtection
 
     csv = tempfile.TemporaryFile()
-    csv.write(u"%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s") % (
-        date.today().strftime("%Y-%m-%d"),  # date, e.g. 2012-09-02
-        '',  # #                           # place of signature
-        '',  # #                           # has signature
-        unicode(appstruct['name']),  # #    # lastname
-        unicode(appstruct['name']),  # #    # surname
-        unicode(appstruct['address1']),  # ## street & no
-        unicode(appstruct['address2']),  # ## address cont'd
-        unicode(appstruct['email']),  # #   # email
-        unicode(appstruct['country']),  # # # country
-        unicode(appstruct[''])
-        )
+    csv.write(
+        (u"%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s") % (
+            date.today().strftime("%Y-%m-%d"),  # date, e.g. 2012-09-02
+            'unknown',  # #                           # place of signature
+            'pending...',  # #                           # has signature
+            unicode(appstruct['firstname']),  # #    # lastname
+            unicode(appstruct['lastname']),  # #    # surname
+            unicode(appstruct['email']),  # #   # email
+            unicode(appstruct['address1']),  # ## street & no
+            unicode(appstruct['address2']),  # ## address cont'd
+            unicode(appstruct['postCode']),
+            unicode(appstruct['city']),
+            unicode(appstruct['country']),  # # # country
+            'j' if 'composer' in appstruct['activity'] else 'n',
+            'j' if 'lyricist' in appstruct['activity'] else 'n',
+            'j' if 'musician' in appstruct['activity'] else 'n',
+            'j' if 'producer' in appstruct['activity'] else 'n',
+            'j' if 'remixer' in appstruct['activity'] else 'n',
+            'j' if 'dj' in appstruct['activity'] else 'n',
+            'j' if appstruct['at_least_three_works'] == 'yes'  else 'n',
+            'j' if appstruct['member_of_colsoc'] == 'yes'  else 'n',
+            'j' if appstruct['understood_declaration'] == 'yes'  else 'n',
+            'j' if appstruct['consider_joining'] == 'yes'  else 'n',
+            'j' if appstruct['noticed_dataProtection'] == 'yes'  else 'n',
+            ))
+    # print for debugging? seek to beginning!
+    #csv.seek(0)
+    #print str(csv.read())
+    csv.seek(0)
     return str(csv.read())
 
 

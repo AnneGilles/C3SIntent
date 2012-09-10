@@ -81,6 +81,37 @@ class TestUtilities(unittest.TestCase):
             print("pdftk not installed. skipping test!")
             print(cpe)
 
+    def test_generate_csv(self):
+        """
+        test creation of csv snippet
+        """
+        from c3sintent.utils import generate_csv
+        my_appstruct = {
+            'activity': ['composer', 'dj'],
+            'firstname': 'John',
+            'lastname': 'Doe',
+            'address1': 'In the Middle',
+            'address2': 'Of Nowhere',
+            'postCode': '12345',
+            'city': 'Town',
+            'email': 'john@example.com',
+            'country': 'de',
+            'at_least_three_works': 'yes',
+            'member_of_colsoc': 'yes',
+            'understood_declaration': 'yes',
+            'consider_joining': 'yes',
+            'noticed_dataProtection': 'yes'
+            }
+        result = generate_csv(my_appstruct)
+        print(result)
+        from datetime import date
+        today = date.today().strftime("%Y-%m-%d")
+        #print(today)
+        self.failUnless(
+            result == str(today + ';unknown;pending...;John;Doe;' +
+                          'john@example.com;In the Middle;Of Nowhere;' +
+                          '12345;Town;de;j;n;n;n;n;j;j;j;j;j;j'))
+
     def test_accountant_mail(self):
         """
         test encryption of email payload
