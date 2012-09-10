@@ -25,7 +25,7 @@ requires = [
     'python-gnupg',
     ]
 # for the translations machinery using transifex you also need to
-# "pip install transifex"
+# "pip install transifex-client"
 test_requirements = [
     'webtest',
     'nose',

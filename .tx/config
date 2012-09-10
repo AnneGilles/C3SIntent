@@ -1,5 +1,5 @@
 [main]
-host = https://www.transifex.net
+host = https://www.transifex.com
 
 [C3Sintent.POT]
 file_filter = translations/C3Sintent.POT/<lang>.po
