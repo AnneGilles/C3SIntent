@@ -20,6 +20,18 @@ def generate_pdf(appstruct):
     my_fdf_filename = "custom.fdf"
     my_pdf_filename = "custom.pdf"
 
+    declaration_pdf_de = "pdftk/absichtserklaerung.pdf"
+    declaration_pdf_en = "pdftk/declaration-of-intent.pdf"
+
+# check for _LOCALE_, decide which language to use
+    #print(appstruct['_LOCALE_'])
+    if appstruct['_LOCALE_'] == "de":
+        pdf_to_be_used = declaration_pdf_de
+    elif appstruct['_LOCALE_'] == "en":
+        pdf_to_be_used = declaration_pdf_en
+    else:  # default fallback: english
+        pdf_to_be_used = declaration_pdf_en
+
 # here we gather all information from the supplied data to prepare pdf-filling
 
     fields = [
@@ -82,7 +94,7 @@ def generate_pdf(appstruct):
         print("running pdftk...")
     pdftk_output = subprocess.call([
             'pdftk',
-            'pdftk/declaration-of-intent.pdf',  # input pdf with form fields
+            pdf_to_be_used,  # input pdf with form fields
             'fill_form', my_fdf_filename,  # fill in values
             'output', my_pdf_filename,  # output filename
             'flatten',  # make form read-only
