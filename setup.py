@@ -24,7 +24,8 @@ requires = [
     'waitress',
     'python-gnupg',
     ]
-
+# for the translations machinery using transifex you also need to
+# "pip install transifex"
 test_requirements = [
     'webtest',
     'nose',
@@ -59,7 +60,8 @@ setup(name='C3Sintent',
       [paste.app_factory]
       main = c3sintent:main
       """,
-      paster_plugins=['pyramid'],
+      # http://opkode.com/media/blog/
+      #        using-extract_messages-in-your-python-egg-with-a-src-directory
       message_extractors={'c3sintent': [
             ('**.py', 'lingua_python', None),
             ('**.pt', 'lingua_xml', None),
