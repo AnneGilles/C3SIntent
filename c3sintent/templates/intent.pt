@@ -15,8 +15,8 @@
   </tal:block>
   <tal:block metal:fill-slot="bottom">
     <p style="text-align:right;">
-      <a href="/?_LOCALE_=en"><img src="static/images/en.png" title="English"></a>
-      <a href="/?_LOCALE_=de"><img src="static/images/de.png" title="Deutsch"></a>
+      <a href="/?_LOCALE_=en"><img src="static/images/en.png" title="English" /></a>
+      <a href="/?_LOCALE_=de"><img src="static/images/de.png" title="Deutsch" /></a>
     </p>
     <p i18n:translate="intent-form-intro-1">
       When we submit our application for approval as a collecting society at the German Patent and Trademark Office, we must be able to prove the anticipated level of support and acceptance for the time when we commence our business operation. Facebook followers are not sufficient – we need some additional assistance.
