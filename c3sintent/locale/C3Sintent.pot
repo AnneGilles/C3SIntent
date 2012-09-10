@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: C3Sintent 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-09-10 09:41+0200\n"
+"POT-Creation-Date: 2012-09-10 11:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,80 +17,103 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
 
-#: c3sintent/views.py:77
+#: c3sintent/views.py:86
 msgid "First Name"
 msgstr ""
 
-#: c3sintent/views.py:79
+#: c3sintent/views.py:88
 msgid "Last Name"
 msgstr ""
 
-#: c3sintent/views.py:80
+#: c3sintent/views.py:89
 msgid "composer"
 msgstr ""
 
-#: c3sintent/views.py:81
+#: c3sintent/views.py:90
 msgid "lyricist"
 msgstr ""
 
-#: c3sintent/views.py:82
+#: c3sintent/views.py:91
 msgid "musician"
 msgstr ""
 
-#: c3sintent/views.py:83
+#: c3sintent/views.py:92
 msgid "music producer"
 msgstr ""
 
-#: c3sintent/views.py:84
+#: c3sintent/views.py:93
 msgid "remixer"
 msgstr ""
 
-#: c3sintent/views.py:85
+#: c3sintent/views.py:94
 msgid "DJ"
 msgstr ""
 
-#: c3sintent/views.py:94 c3sintent/views.py:133 c3sintent/views.py:141
-#: c3sintent/views.py:151
+#: c3sintent/views.py:98
+msgid "Yes, I am musically active as a (multiple selection possible)"
+msgstr ""
+
+#: c3sintent/views.py:103 c3sintent/views.py:141 c3sintent/views.py:149
+#: c3sintent/views.py:159
 msgid "Yes"
 msgstr ""
 
-#: c3sintent/views.py:95
+#: c3sintent/views.py:104
 msgid "No"
 msgstr ""
 
-#: c3sintent/views.py:106
-msgid "I am a member of a collecting society."
-msgstr ""
-
-#: c3sintent/views.py:111
-msgid "Email"
+#: c3sintent/views.py:108
+msgid ""
+"I have been the (co-)creator of at least three titles in one of the functions"
+" mentioned under (1)"
 msgstr ""
 
 #: c3sintent/views.py:114
-msgid "Street & No."
-msgstr ""
-
-#: c3sintent/views.py:117
-msgid "address cont'd"
+msgid "I am a member of a collecting society."
 msgstr ""
 
 #: c3sintent/views.py:119
+msgid "Email"
+msgstr ""
+
+#: c3sintent/views.py:122
+msgid "Street & No."
+msgstr ""
+
+#: c3sintent/views.py:125
+msgid "address cont'd"
+msgstr ""
+
+#: c3sintent/views.py:127
 msgid "Post Code"
 msgstr ""
 
-#: c3sintent/views.py:121
+#: c3sintent/views.py:129
 msgid "City"
 msgstr ""
 
-#: c3sintent/views.py:123
+#: c3sintent/views.py:131
 msgid "Country"
 msgstr ""
 
-#: c3sintent/views.py:129
+#: c3sintent/views.py:137
 msgid "I have read and understood the text of the declaration of intent."
 msgstr ""
 
-#: c3sintent/views.py:160
+#: c3sintent/views.py:145
+msgid ""
+"I seriously consider to join the C3S and want to be notified via e-mail about"
+" its foundation."
+msgstr ""
+
+#: c3sintent/views.py:153
+msgid ""
+"I have taken note of the Data Protection Declaration which is part of this "
+"text and can be read separately at http://www.c3s.cc/disclaimer-en.html and "
+"agree with it. I know that I may revoke this consent at any time."
+msgstr ""
+
+#: c3sintent/views.py:168
 msgid "Submit"
 msgstr ""
 

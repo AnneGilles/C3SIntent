@@ -96,7 +96,7 @@ def declare_intent(request):
         activity = colander.SchemaNode(
             deform.Set(),
             title=_(
-                u'Yes, I am musically active as a ' +
+                u'Yes, I am musically active as a '
                 '(multiple selection possible)'),
             widget=deform.widget.CheckboxChoiceWidget(values=type_of_creator))
 
@@ -105,9 +105,8 @@ def declare_intent(request):
 
         at_least_three_works = colander.SchemaNode(
             colander.String(),
-            title=_(
-                u'I have been the (co-)creator of at least three titles in ' +
-                'one of the functions mentioned under (1)'),
+            title=_(u'I have been the (co-)creator of at least three titles '
+                    'in one of the functions mentioned under (1)'),
             validator=colander.OneOf([x[0] for x in yes_no]),
             widget=deform.widget.RadioChoiceWidget(values=yes_no))
         member_of_colsoc = colander.SchemaNode(
@@ -143,7 +142,7 @@ def declare_intent(request):
             )
         consider_joining = colander.SchemaNode(
             colander.String(),
-            title=_(u'I seriously consider to join the C3S and want to ' +
+            title=_(u'I seriously consider to join the C3S and want to '
                     'be notified via e-mail about its foundation.'),
 #            validator=colander.OneOf([x[0] for x in yes_no]),
             widget=deform.widget.CheckboxChoiceWidget(
@@ -151,9 +150,9 @@ def declare_intent(request):
             )
         noticed_dataProtection = colander.SchemaNode(
             colander.String(),
-            title=_(u'I have taken note of the Data Protection Declaration ' +
-                    'which is part of this text and can be read separately ' +
-                    'at http://www.c3s.cc/disclaimer-en.html and agree with ' +
+            title=_(u'I have taken note of the Data Protection Declaration '
+                    'which is part of this text and can be read separately '
+                    'at http://www.c3s.cc/disclaimer-en.html and agree with '
                     'it. I know that I may revoke this consent at any time.'),
 #            validator=colander.OneOf([x[0] for x in yes_no]),
             widget=deform.widget.CheckboxChoiceWidget(

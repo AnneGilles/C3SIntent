@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" 
-      xml:lang="en" 
-      xmlns:tal="http://xml.zope.org/namespaces/tal" 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal">
 <head>
   <title>Declaration of Intent to Join Cultural Commons Collecting Society (C3S)</title>
@@ -37,10 +37,13 @@
   </div>
   <div id="footer" style="height:50px;padding-top:10px">
     <div class="footer">&copy; Copyright 2012, OpenMusicContest.org e.V. &nbsp; &nbsp;
-      <a target="_blank" style="text-decoration:none; color:black; font-size:66%" href="https://www.transifex.com/projects/p/C3SIntent/resource/POT/" 
+      <a target="_blank" style="text-decoration:none; color:black; font-size:66%"
+	 href="https://www.transifex.com/projects/p/C3Sintent/resource/POT/"
 	 title="Want more langages? Help us translate on Transifex.com">
-	<img border="0" src="https://www.transifex.com/projects/p/C3Sintent/resource/POT/chart/image_png" style="vertical-align: middle;"/>  &nbsp; &nbsp;
-	<img border="0" src="https://ds0k0en9abmn1.cloudfront.net/static/charts/images/tx-logo-micro.646b0065fce6.png" style="vertical-align: middle;"/>
+	<img border="0" src="https://www.transifex.com/projects/p/C3Sintent/resource/POT/chart/image_png"
+	     style="vertical-align: middle;"/>  &nbsp; &nbsp;
+	<img border="0" src="https://ds0k0en9abmn1.cloudfront.net/static/charts/images/tx-logo-micro.646b0065fce6.png"
+	     style="vertical-align: middle;"/>
       </a>
     </div>
   </div>
