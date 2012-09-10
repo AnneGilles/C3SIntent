@@ -35,7 +35,7 @@ class TestUtilities(unittest.TestCase):
         DBSession.remove()
         testing.tearDown()
 
-    def test_generate_pdf(self):
+    def test_generate_pdf_en(self):
         """
         Test pdf generation
         and resulting pdf size
@@ -57,6 +57,7 @@ class TestUtilities(unittest.TestCase):
             'understood_declaration': 'understood_declaration',
             'consider_joining': 'consider_joining',
             'noticed_dataProtection': 'noticed_dataProtection',
+            '_LOCALE_': 'en',
             }
 
         # a skipTest iff pdftk is not installed
@@ -74,6 +75,53 @@ class TestUtilities(unittest.TestCase):
                 #print("size of pdf: " + str(len(result.body)))
                 # check pdf size
                 self.assertTrue(83000 > len(result.body) > 78000)
+
+                # TODO: check pdf for contents
+
+        except CalledProcessError, cpe:  # pragma: no cover
+            print("pdftk not installed. skipping test!")
+            print(cpe)
+
+    def test_generate_pdf_de(self):
+        """
+        Test pdf generation
+        and resulting pdf size
+        """
+        from c3sintent.views import generate_pdf
+
+        mock_appstruct = {
+            'firstname': u'Anne',
+            'lastname': u'Gilles',
+            'address1': u'Sonnenstraße 23',
+            'address2': u'12345 Müsterstädt',
+            'postCode': '12345',
+            'city': 'City',
+            'email': u'foo@example.com',
+            'country': 'country',
+            'activity': set([u'composer', u'lyricist', u'dj']),
+            'at_least_three_works': 'at_least_three_works',
+            'member_of_colsoc': 'member_of_colsoc',
+            'understood_declaration': 'understood_declaration',
+            'consider_joining': 'consider_joining',
+            'noticed_dataProtection': 'noticed_dataProtection',
+            '_LOCALE_': 'de',
+            }
+
+        # a skipTest iff pdftk is not installed
+        import subprocess
+        from subprocess import CalledProcessError
+        try:
+            res = subprocess.check_call(
+                ["which", "pdftk"], stdout=None)
+            if res == 0:
+                # go ahead with the tests
+                result = generate_pdf(mock_appstruct)
+
+                self.assertEquals(result.content_type,
+                                  'application/pdf')
+                #print("size of pdf: " + str(len(result.body)))
+                # check pdf size
+                self.assertTrue(87000 > len(result.body) > 78000)
 
                 # TODO: check pdf for contents
 

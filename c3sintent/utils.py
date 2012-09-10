@@ -29,7 +29,8 @@ def generate_pdf(appstruct):
         pdf_to_be_used = declaration_pdf_de
     elif appstruct['_LOCALE_'] == "en":
         pdf_to_be_used = declaration_pdf_en
-    else:  # default fallback: english
+    else:  # pragma: no cover
+        # default fallback: english
         pdf_to_be_used = declaration_pdf_en
 
 # here we gather all information from the supplied data to prepare pdf-filling
@@ -114,7 +115,7 @@ def generate_pdf(appstruct):
     try:
         os.unlink(my_fdf_filename)
         os.unlink(my_pdf_filename)
-    except:
+    except:  # pragma: no cover
         print('error while unlinking pdf or fdf')
         pass
 
