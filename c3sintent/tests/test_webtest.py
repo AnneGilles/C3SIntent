@@ -36,35 +36,49 @@ class FunctionalTests(unittest.TestCase):
     def test_lang_en(self):
         """load the front page, check english string exists"""
         res = self.testapp.reset()
-        res = self.testapp.get('/?_LOCALE_=en', status=200)
-        self.failUnless('When we' in res.body)
+        res = self.testapp.get('/?_LOCALE_=en', status=302)
+        self.failUnless('The resource was found at' in res.body)
+        # we are being redirected...
+        res1 = res.follow()
+        self.failUnless('When we' in res1.body)
 
 #     def test_lang_de(self):
 #         """load the front page, check german string exists"""
-#         res = self.testapp.get('/?_LOCALE_=de', status=200)
-#         self.failUnless(
-#             'Willkommen bei der OpenMusicContest.org' in res.body)
-
-#     def test_no_cookies(self):
-#         """load the front page, check default english string exists"""
 #         res = self.testapp.reset()
 #         res = self.testapp.get('/', status=200,
 #                                headers={
-#                 'Accept-Language': 'da,en-gb; q=0.8, en; q=0.7'})
-#        self.failUnless('Welcome to the OpenMusicContest.org' in res.body)
+#                 'Accept-Language': 'de-DE'})
+#         print(res.body)
+#         self.failUnless(
+#             'zum geplanten Beitritt' in res.body)
+
+    def test_no_cookies(self):
+        """load the front page, check default english string exists"""
+        res = self.testapp.reset()
+        res = self.testapp.get('/', status=200,
+                               headers={
+                'Accept-Language': 'da,en-gb; q=0.8, en; q=0.7'})
+        self.failUnless('Declaration' in res.body)
 
     def test_form_lang_en(self):
         """load the join form, check english string exists"""
         res = self.testapp.reset()
-        res = self.testapp.get('/?_LOCALE_=en', status=200)
-        self.failUnless('Please answer all questions' in res.body)
+        res = self.testapp.get('/?_LOCALE_=en', status=302)
+        self.failUnless('The resource was found at' in res.body)
+        # we are being redirected...
+        res1 = res.follow()
+        self.failUnless('Please answer all questions' in res1.body)
 
     def test_form_lang_en_non_validating(self):
         """load the join form, check english string exists"""
         res = self.testapp.reset()
-        res = self.testapp.get('/?_LOCALE_=en', status=200)
+        res = self.testapp.get('/?_LOCALE_=en', status=302)
 
-        form = res.form
+        self.failUnless('The resource was found at' in res.body)
+        # we are being redirected...
+        res1 = res.follow()
+
+        form = res1.form
         #print(form.fields)
         #print(form.fields.values())
         form['firstname'] = 'John'
@@ -75,9 +89,12 @@ class FunctionalTests(unittest.TestCase):
 
     def test_form_lang_de(self):
         """load the join form, check german string exists"""
-        res = self.testapp.get('/?_LOCALE_=de', status=200)
-
+        res = self.testapp.get('/?_LOCALE_=de', status=302)
+        #print(res)
+        self.failUnless('The resource was found at' in res.body)
+        # we are being redirected...
+        res2 = res.follow()
         # test for german translation of template text (lingua_xml)
-        self.failUnless('Bei Antragstellung zur Zulassung als' in res.body)
+        self.failUnless('Bei Antragstellung zur Zulassung als' in res2.body)
         # test for german translation of form field label (lingua_python)
-        self.failUnless('Texter' in res.body)
+        self.failUnless('Texter' in res2.body)
