@@ -14,7 +14,20 @@ follow these steps to get the new translations ready and working:
 
   python setup.py extract_messages
 
-will search code and templates and update the PO template (POT). To use transifex
+will search code and templates and update the PO template (POT).
+
+
+Some notes about lingua, especially lingua_xml
+==============================================
+The extraction process uses lingua_python for python files (.pt) and lingua_xml
+for chameleon templates (.pt) as can be seen in setup.py. Please make sure to
+use valid XML syntax in your templates, because otherwise lingua_xml will just
+skip the remainder and not produce all the relevant output.
+
+
+Using transifex.com
+===================
+To use transifex
 as a hub for translations to ease engagement of translators (usually non-developers),
 you as the developer can integrate this in your app by using the transifex client.
 It works similar to git in terms of pushing and pulling translations:
