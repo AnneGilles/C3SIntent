@@ -67,7 +67,8 @@ class FunctionalTests(unittest.TestCase):
         self.failUnless('The resource was found at' in res.body)
         # we are being redirected...
         res1 = res.follow()
-        self.failUnless('Please answer all questions' in res1.body)
+
+        self.failUnless('Please answer ' in str(res1.body))
 
     def test_form_lang_en_non_validating(self):
         """load the join form, check english string exists"""
