@@ -28,19 +28,24 @@ class MyModel(Base):
 
 
 def populate():
-    session = DBSession()
-    model = MyModel(name=u'root', value=55)
-    session.add(model)
-    session.flush()
-    transaction.commit()
-
+#    session = DBSession()
+#    model = MyModel(name=u'root', value=55)
+#    try:
+#        session.add(model)
+#    except InvalidRequestError, e:
+#    except OperationalError, ope:
+#        pass
+#    session.flush()
+#    transaction.commit()
+    pass
 
 def initialize_sql(engine):
-    DBSession.configure(bind=engine)
-    Base.metadata.bind = engine
-    Base.metadata.create_all(engine)
-    try:
-        populate()
-    except IntegrityError:  # pragma: no cover
-        transaction.abort()
-        # if data is already present in database the transaction is aborted
+    pass
+#    DBSession.configure(bind=engine)
+#    Base.metadata.bind = engine
+#    Base.metadata.create_all(engine)
+#    try:
+#        populate()
+#    except IntegrityError:  # pragma: no cover
+#        transaction.abort()
+#        # if data is already present in database the transaction is aborted
