@@ -1,5 +1,4 @@
 # -*- coding: utf-8  -*-
-import os
 import tempfile
 import subprocess
 from fdfgen import forge_fdf
@@ -97,6 +96,9 @@ def generate_pdf(appstruct):
 #            'flatten',  # make form read-only
 #            'verbose'  # be verbose?
             ])
+
+    if DEBUG:  # pragma: no cover
+        print(pdf_file.name)
     pdf_file.seek(0)
 
     if DEBUG:  # pragma: no cover
@@ -143,11 +145,11 @@ def generate_csv(appstruct):
             'j' if 'producer' in appstruct['activity'] else 'n',
             'j' if 'remixer' in appstruct['activity'] else 'n',
             'j' if 'dj' in appstruct['activity'] else 'n',
-            'j' if appstruct['at_least_three_works'] == 'yes'  else 'n',
-            'j' if appstruct['member_of_colsoc'] == 'yes'  else 'n',
-            'j' if appstruct['understood_declaration'] == 'yes'  else 'n',
-            'j' if appstruct['consider_joining'] == 'yes'  else 'n',
-            'j' if appstruct['noticed_dataProtection'] == 'yes'  else 'n',
+            'j' if appstruct['at_least_three_works'] == 'yes' else 'n',
+            'j' if appstruct['member_of_colsoc'] == 'yes' else 'n',
+            'j' if appstruct['understood_declaration'] == 'yes' else 'n',
+            'j' if appstruct['consider_joining'] == 'yes' else 'n',
+            'j' if appstruct['noticed_dataProtection'] == 'yes' else 'n',
             ))
     # print for debugging? seek to beginning!
     #csv.seek(0)
@@ -197,7 +199,7 @@ that's it.. bye!""" % (
         subject="[c3s] Yes! a new letter of intent",
         sender="noreply@c3s.cc",
         recipients=["c@c3s.cc"],
-        body=str(encrypt_with_gnupg((unencrypted)))
+        body=unicode(encrypt_with_gnupg((unencrypted)))
         )
 
     attachment = Attachment("foo.gpg", "application/gpg-encryption",
