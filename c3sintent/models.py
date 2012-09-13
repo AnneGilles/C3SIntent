@@ -22,12 +22,12 @@ class MyModel(Base):
     name = Column(Unicode(255), unique=True)
     value = Column(Integer)
 
-    def __init__(self, name, value):
+    def __init__(self, name, value):  # pragma: no coverage: not using this atm
         self.name = name
         self.value = value
 
 
-def populate():
+def populate():  # pragma: no coverage: not using this atm
 #    session = DBSession()
 #    model = MyModel(name=u'root', value=55)
 #    try:
@@ -38,6 +38,7 @@ def populate():
 #    session.flush()
 #    transaction.commit()
     pass
+
 
 def initialize_sql(engine):
     pass
