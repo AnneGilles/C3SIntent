@@ -44,6 +44,7 @@ def generate_pdf(appstruct):
         ('city', appstruct['city']),
         ('email', appstruct['email']),
         ('country', appstruct['country']),
+        ('region', appstruct['region']),
         ('composer',
          'Yes' if appstruct['activity'].issuperset(['composer']) else 'Off'),
         ('lyricist',
@@ -93,7 +94,7 @@ def generate_pdf(appstruct):
             pdf_to_be_used,  # input pdf with form fields
             'fill_form', fdf_file.name,  # fill in values
             'output', pdf_file.name,  # output file
-#            'flatten',  # make form read-only
+            'flatten',  # make form read-only
 #            'verbose'  # be verbose?
             ])
 
@@ -127,7 +128,7 @@ def generate_csv(appstruct):
 
     csv = tempfile.TemporaryFile()
     csv.write(
-        (u"%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s") % (
+        (u"%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s") % (
             date.today().strftime("%Y-%m-%d"),  # e.g. 2012-09-02
             'unknown',  # #                           # place of signature
             'pending...',  # #                           # has signature
@@ -138,6 +139,7 @@ def generate_csv(appstruct):
             unicode(appstruct['address2']),  # ## address cont'd
             unicode(appstruct['postCode']),
             unicode(appstruct['city']),
+            unicode(appstruct['region']),
             unicode(appstruct['country']),  # # # country
             'j' if 'composer' in appstruct['activity'] else 'n',
             'j' if 'lyricist' in appstruct['activity'] else 'n',
@@ -170,6 +172,7 @@ address2:     \t\t %s
 postcode:     \t\t %s
 city:         \t\t %s
 country:      \t\t %s
+region:      \t\t %s
 
 activities:   \t\t %s
 created3:     \t\t $s
@@ -188,6 +191,7 @@ that's it.. bye!""" % (
         unicode(appstruct['postCode']),
         unicode(appstruct['city']),
         unicode(appstruct['country']),
+        unicode(appstruct['region']),
         unicode(appstruct['at_least_three_works']),
         unicode(appstruct['member_of_colsoc']),
         unicode(appstruct['understood_declaration']),

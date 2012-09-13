@@ -46,11 +46,12 @@ class TestUtilities(unittest.TestCase):
             'firstname': u'Anne',
             'lastname': u'Gilles',
             'address1': u'Sonnenstraße 23',
-            'address2': u'12345 Müsterstädt',
-            'postCode': '12345',
-            'city': 'City',
+            'address2': u'im Hinterhaus, bitte klingeln',
+            'postCode': u'12345',
+            'city': u'12345 Müsterstädt',
             'email': u'foo@example.com',
-            'country': 'country',
+            'country': u'some country',
+            'region': u'some region',
             'activity': set([u'composer', u'lyricist', u'dj']),
             'at_least_three_works': 'at_least_three_works',
             'member_of_colsoc': 'member_of_colsoc',
@@ -93,11 +94,12 @@ class TestUtilities(unittest.TestCase):
             'firstname': u'Anne',
             'lastname': u'Gilles',
             'address1': u'Sonnenstraße 23',
-            'address2': u'12345 Müsterstädt',
-            'postCode': '12345',
-            'city': 'City',
+            'address2': u'irgendwo',
+            'postCode': u'12345',
+            'city': u'12345 Müsterstädt',
             'email': u'foo@example.com',
-            'country': 'country',
+            'region': u'my region',
+            'country': u'my country',
             'activity': set([u'composer', u'lyricist', u'dj']),
             'at_least_three_works': 'at_least_three_works',
             'member_of_colsoc': 'member_of_colsoc',
@@ -141,8 +143,9 @@ class TestUtilities(unittest.TestCase):
             'address1': 'In the Middle',
             'address2': 'Of Nowhere',
             'postCode': '12345',
-            'city': 'Town',
+            'city': 'My Town',
             'email': 'john@example.com',
+            'region': 'Hessen',
             'country': 'de',
             'at_least_three_works': 'yes',
             'member_of_colsoc': 'yes',
@@ -158,7 +161,7 @@ class TestUtilities(unittest.TestCase):
         self.failUnless(
             result == str(today + ';unknown;pending...;John;Doe;' +
                           'john@example.com;In the Middle;Of Nowhere;' +
-                          '12345;Town;de;j;n;n;n;n;j;j;j;j;j;j'))
+                          '12345;My Town;Hessen;de;j;n;n;n;n;j;j;j;j;j;j'))
 
     def test_accountant_mail(self):
         """
@@ -174,6 +177,7 @@ class TestUtilities(unittest.TestCase):
             'postCode': '12345',
             'city': 'Town',
             'email': 'john@example.com',
+            'region': 'Hessen',
             'country': 'af',
             'at_least_three_works': 'yes',
             'member_of_colsoc': 'yes',
@@ -188,5 +192,6 @@ class TestUtilities(unittest.TestCase):
         self.assertTrue('c@c3s.cc' in result.recipients)
         self.assertTrue('-----BEGIN PGP MESSAGE-----' in result.body)
         self.assertTrue('-----END PGP MESSAGE-----' in result.body)
-        self.assertTrue('[c3s] Yes! a new letter of intent' in result.subject)
+        self.assertTrue(
+            '[c3s] Yes! a new letter of intent' in result.subject)
         self.assertEquals('noreply@c3s.cc', result.sender)

@@ -126,7 +126,11 @@ def declare_intent(request):
         postCode = colander.SchemaNode(colander.String(),
                                        title=_(u'Post Code'))
         city = colander.SchemaNode(colander.String(),
-                                       title=_(u'City'))
+                                   title=_(u'City'))
+        region = colander.SchemaNode(
+            colander.String(),
+            title=_(u'Federal State / Province / County'),
+            missing=unicode(''))
         country = colander.SchemaNode(colander.String(),
                                       title=_(u'Country'),
                                       default=country_default,
@@ -178,7 +182,13 @@ def declare_intent(request):
                 print(appstruct)
         except ValidationFailure, e:
             print(e)
-            return{'form': e.render(), }
+            #message.append(
+            request.session.flash(
+                _(u"Please note: There were errors, "
+                  "please check the form below."),
+                'message_above_form',
+                allow_duplicate=False)
+            return{'form': e.render()}
 
         # send mail to accountants
         mailer = get_mailer(request)
@@ -190,4 +200,4 @@ def declare_intent(request):
 
     html = form.render()
 
-    return {'form': html, }
+    return {'form': html}

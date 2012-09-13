@@ -78,6 +78,7 @@ class TestViews(unittest.TestCase):
                 '_LOCALE_': 'en',
                 'activity': set([u'composer', u'dj']),
                 'country': 'AF',
+                'region': 'Hesse',
                 'at_least_three_works': 'yes',
                 'member_of_colsoc': 'yes',
                 'understood_declaration': 'yes',

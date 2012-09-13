@@ -20,15 +20,22 @@
       <a href="/?_LOCALE_=de"><img src="static/images/de.png" title="Deutsch"
 				   alt="auf deutsche Sprache umschalten" /></a>
     </p>
-    <strong tal:repeat="message request.session.pop_flash()">
-      ${message}
+    <p>
+      <strong style="color:red;" tal:repeat="message request.session.peek_flash('message_above_form')">
+	${message}
+      </strong>
+    </p>
+    <strong i18n:translate="intent-form-note">
+      After submitting the form, you will be presented with a PDF with your data filled in. Please print out at least the second and third page. Take your time and read them carefully - and don't forget to sign! Send both (!) pages scanned or printed to C3S. Please find the adresses on the first page. We will receive your data via encrypted email -- and then wait for your signature to make it valid!
     </strong>
 
     <p i18n:translate="intent-form-intro-1">
       When we submit our application for approval as a collecting society at the German Patent and Trademark Office, we must be able to prove the anticipated level of support and acceptance for the time when we commence our business operation. Facebook followers are not sufficient – we need some additional assistance.
     </p>
-    <p i18n:translate="intent-form-intro-3">
+    <p i18n:translate="intent-form-intro-2">
       If you are willing to become a member of C3S after its foundation and wish to entrust C3S with the commercial utilisation of some or all of your works, you can now declare this intent to the German Patent and Trademark Office.
+    </p>
+    <p i18n:translate="intent-form-intro-3">
 You are allowed to currently be a member of a different collecting society – a transfer is possible, even if it may be a lengthy process. At the moment, you merely confirm that you seriously consider to become a member of the new C3S. Your signature does not constitute a binding agreement to join.
     </p>
     <p i18n:translate="intent-form-intro-4">
