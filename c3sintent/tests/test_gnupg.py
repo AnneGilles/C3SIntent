@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import unittest
-import os
 from pyramid import testing
 
 from c3sintent.models import DBSession
@@ -25,23 +24,21 @@ class TestGnuPG(unittest.TestCase):
         DBSession.remove()
         testing.tearDown()
 
-    def test_encrypt_with_gnupg(self):
-        from c3sintent.gnupg_encrypt import encrypt_with_gnupg
-        result = encrypt_with_gnupg('foo')
-        #print ("the result: " + str(result))
-        self.assertTrue('-----BEGIN PGP MESSAGE-----' in str(result))
-        self.assertTrue('-----END PGP MESSAGE-----' in str(result))
-
     def test_encrypt_with_gnupg_w_umlauts(self):
+        """
+        test if unicode input is acceptable and digested
+        """
         from c3sintent.gnupg_encrypt import encrypt_with_gnupg
-        result = unicode(encrypt_with_gnupg(u'füöß'))
+        result = encrypt_with_gnupg(u'fuck the umläuts')
         #print ("the result: " + str(result))
         self.assertTrue('-----BEGIN PGP MESSAGE-----' in str(result))
         self.assertTrue('-----END PGP MESSAGE-----' in str(result))
 
     def test_encrypt_with_gnupg_import_key(self):
+        """
+        test if encryption produces any result at all
+        """
         from c3sintent.gnupg_encrypt import encrypt_with_gnupg
-        os.unlink('keys/pubring.gpg')
         result = encrypt_with_gnupg('foo')
         #print ("the result: " + str(result))
         self.assertTrue('-----BEGIN PGP MESSAGE-----' in str(result))
