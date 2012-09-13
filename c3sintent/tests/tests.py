@@ -117,8 +117,8 @@ class TestViews(unittest.TestCase):
                 import slate
                 content = slate.PDF(resultstring)
 
-                # uncomment to the the text in the PDF produced
-                print(content)
+                # uncomment to see the text in the PDF produced
+                #print(content)
 
                 # test if text shows up as expected
 #                self.assertTrue('TheFirstName' in str(content))
