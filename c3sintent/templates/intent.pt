@@ -15,9 +15,15 @@
   </tal:block>
   <tal:block metal:fill-slot="bottom">
     <p style="text-align:right;">
-      <a href="/?_LOCALE_=en"><img src="static/images/en.png" title="English" /></a>
-      <a href="/?_LOCALE_=de"><img src="static/images/de.png" title="Deutsch" /></a>
+      <a href="/?_LOCALE_=en"><img src="static/images/en.png" title="English"
+				   alt="switch to English language" /></a>
+      <a href="/?_LOCALE_=de"><img src="static/images/de.png" title="Deutsch"
+				   alt="auf deutsche Sprache umschalten" /></a>
     </p>
+    <strong tal:repeat="message request.session.pop_flash()">
+      ${message}
+    </strong>
+
     <p i18n:translate="intent-form-intro-1">
       When we submit our application for approval as a collecting society at the German Patent and Trademark Office, we must be able to prove the anticipated level of support and acceptance for the time when we commence our business operation. Facebook followers are not sufficient – we need some additional assistance.
     </p>
@@ -47,9 +53,6 @@ By sending an email to data@c3s.cc you may order your data to be deleted at any 
       Please answer <strong>all</strong> questions:
     </p>
     <div id="form" tal:content="structure form"/>
-    <strong tal:repeat="message request.session.pop_flash()">
-      ${message}
-    </strong>
   </tal:block>
   <tal:block metal:fill-slot="deform-load">
     <!--! loading deform --> 
