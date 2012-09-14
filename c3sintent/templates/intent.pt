@@ -14,21 +14,22 @@
     <h1 i18n:translate="membership-form">Declaration of intent to join Cultural Commons Collecting Society (C3S)</h1>
   </tal:block>
   <tal:block metal:fill-slot="bottom">
-    <p style="text-align:right;">
+    <div style="text-align:left;">
+      <strong style="color:red;" tal:repeat="message request.session.peek_flash('message_above_form')">
+	${message}
+      </strong>
+    </div> &nbsp;
+    <div style="text-align:right;">
       <a href="/?_LOCALE_=en"><img src="static/images/en.png" title="English"
 				   alt="switch to English language" /></a>
       <a href="/?_LOCALE_=de"><img src="static/images/de.png" title="Deutsch"
 				   alt="auf deutsche Sprache umschalten" /></a>
-    </p>
+    </div>
     <p>
-      <strong style="color:red;" tal:repeat="message request.session.peek_flash('message_above_form')">
-	${message}
+      <strong i18n:translate="intent-form-note">
+	After submitting the form below, you will be presented with a PDF download (~90 KB) with your data filled in. Please print out at least the second and third page. Take your time and read them carefully - and don't forget to sign! Send both (!) pages scanned or printed to C3S. Please find the addresses on the first page. We will receive your data via encrypted email -- and then wait for your signature to make it valid!
       </strong>
     </p>
-    <strong i18n:translate="intent-form-note">
-      After submitting the form, you will be presented with a PDF with your data filled in. Please print out at least the second and third page. Take your time and read them carefully - and don't forget to sign! Send both (!) pages scanned or printed to C3S. Please find the adresses on the first page. We will receive your data via encrypted email -- and then wait for your signature to make it valid!
-    </strong>
-
     <p i18n:translate="intent-form-intro-1">
       When we submit our application for approval as a collecting society at the German Patent and Trademark Office, we must be able to prove the anticipated level of support and acceptance for the time when we commence our business operation. Facebook followers are not sufficient – we need some additional assistance.
     </p>
