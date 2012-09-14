@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: C3Sintent 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-09-10 11:29+0200\n"
+"POT-Creation-Date: 2012-09-14 12:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,8 +53,8 @@ msgstr ""
 msgid "Yes, I am musically active as a (multiple selection possible)"
 msgstr ""
 
-#: c3sintent/views.py:103 c3sintent/views.py:141 c3sintent/views.py:149
-#: c3sintent/views.py:159
+#: c3sintent/views.py:103 c3sintent/views.py:145 c3sintent/views.py:153
+#: c3sintent/views.py:163
 msgid "Yes"
 msgstr ""
 
@@ -92,35 +92,52 @@ msgstr ""
 msgid "City"
 msgstr ""
 
-#: c3sintent/views.py:131
+#: c3sintent/views.py:132
+msgid "Federal State / Province / County"
+msgstr ""
+
+#: c3sintent/views.py:135
 msgid "Country"
 msgstr ""
 
-#: c3sintent/views.py:137
+#: c3sintent/views.py:141
 msgid "I have read and understood the text of the declaration of intent."
 msgstr ""
 
-#: c3sintent/views.py:145
+#: c3sintent/views.py:149
 msgid ""
 "I seriously consider to join the C3S and want to be notified via e-mail about"
 " its foundation."
 msgstr ""
 
-#: c3sintent/views.py:153
+#: c3sintent/views.py:157
 msgid ""
 "I have taken note of the Data Protection Declaration which is part of this "
 "text and can be read separately at http://www.c3s.cc/disclaimer-en.html and "
 "agree with it. I know that I may revoke this consent at any time."
 msgstr ""
 
-#: c3sintent/views.py:168
+#: c3sintent/views.py:172
 msgid "Submit"
 msgstr ""
 
-#. Default: Declaration of Intent to join the Cultural Commons Collecting Society
-#. (C3S)
+#: c3sintent/views.py:187
+msgid "Please note: There were errors, please check the form below."
+msgstr ""
+
+#. Default: Declaration of intent to join Cultural Commons Collecting Society (C3S)
 #: c3sintent/templates/intent.pt:14
 msgid "membership-form"
+msgstr ""
+
+#. Default: After submitting the form below, you will be presented with a PDF
+#. download (~90 KB) with your data filled in. Please print out at least the second
+#. and third page. Take your time and read them carefully - and don't forget to
+#. sign! Send both (!) pages scanned or printed to C3S. Please find the addresses
+#. on the first page. We will receive your data via encrypted email -- and then
+#. wait for your signature to make it valid!
+#: c3sintent/templates/intent.pt:29
+msgid "intent-form-note"
 msgstr ""
 
 #. Default: When we submit our application for approval as a collecting society at
@@ -128,75 +145,91 @@ msgstr ""
 #. level of support and acceptance for the time when we commence our business
 #. operation. Facebook followers are not sufficient – we need some additional
 #. assistance.
-#: c3sintent/templates/intent.pt:21
+#: c3sintent/templates/intent.pt:33
 msgid "intent-form-intro-1"
 msgstr ""
 
-#. Default: If you are willing to become a member of the C3S after its foundation
-#. and wish to entrust the C3S with the commercial utilisation of some or all of
-#. your works, you can now declare this intent to the German Patent and Trademark
-#. Office. You are allowed to currently be a member of a different collecting
+#. Default: If you are willing to become a member of C3S after its foundation and
+#. wish to entrust C3S with the commercial utilisation of some or all of your
+#. works, you can now declare this intent to the German Patent and Trademark
+#. Office.
+#: c3sintent/templates/intent.pt:36
+msgid "intent-form-intro-2"
+msgstr ""
+
+#. Default: You are allowed to currently be a member of a different collecting
 #. society – a transfer is possible, even if it may be a lengthy process. At the
 #. moment, you merely confirm that you seriously consider to become a member of the
 #. new C3S. Your signature does not constitute a binding agreement to join.
-#: c3sintent/templates/intent.pt:24
+#: c3sintent/templates/intent.pt:39
 msgid "intent-form-intro-3"
 msgstr ""
 
 #. Default: You have to be a composer, lyricist, musician, music producer, remixer
-#. or DJ, and you must have written, or mixed, at least three tracks. This means
-#. that you have created, or co-created, not less than three different works of
-#. music. We are happy about professionals or semi-professionals, but amateur
-#. musicians and prospective artists will also find their home in the C3S – even if
-#. you have only just compiled your first remixes or mashups.
-#: c3sintent/templates/intent.pt:28
+#. or DJ, and you must have written, produced, performed, or mixed, at least three
+#. tracks. This means that you have created, or co-created, not less than three
+#. different works of music. We are happy about professionals or
+#. semi-professionals, but amateur musicians and prospective artists will also find
+#. their home in C3S – even if you have only just compiled your first remixes or
+#. mashups.
+#: c3sintent/templates/intent.pt:42
 msgid "intent-form-intro-4"
 msgstr ""
 
-#. Default: After the C3S has been founded, we will use your data to ask you
-#. whether you really want to become a member. If not, your declaration will be
-#. deleted. It will also be deleted if you have second thoughts and notify us in
-#. writing that you wish to withdraw your declaration.
-#: c3sintent/templates/intent.pt:31
+#. Default: After C3S has been founded, we will use your data to ask you whether
+#. you really want to become a member. If not, your declaration will be deleted. It
+#. will also be deleted if you have second thoughts and notify us in writing that
+#. you wish to withdraw your declaration.
+#: c3sintent/templates/intent.pt:45
 msgid "intent-form-intro-5"
 msgstr ""
 
 #. Default: In order to prevent falsifications, we will ask you not only for your
-#. name, but also for your e-mail and postal addresses, as it is done in petitions,
+#. name, but also for your email and postal addresses, as it is done in petitions,
 #. too. Of course we will only use your data for the application to the German
 #. Patent and Trademark Office and will neither pass them on to third parties, nor
 #. use them for other purposes, or publish them. They will be stored in Germany by
 #. the registered association OpenMusicContest.org as representative of the C3S
 #. foundation initiative, according to the requirements of the Federal Data
 #. Protection Act.
-#: c3sintent/templates/intent.pt:34
+#: c3sintent/templates/intent.pt:48
 msgid "intent-form-intro-6"
 msgstr ""
 
-#. Default: By sending an e-mail to data@c3s.cc you may order your data to be
+#. Default: By sending an email to data@c3s.cc you may order your data to be
 #. deleted at any time, and without giving reasons. Upon request to the same
 #. address, you may also ask for information about the data we have stored about
 #. you. However, a deletion of your data will have the result that we can not get
 #. in touch with you, should you wish to join the collecting society. You can read
 #. the details about how we handle your data (Data Protection Declaration)
 #. separately on our website at
-#: c3sintent/templates/intent.pt:37
+#: c3sintent/templates/intent.pt:51
 msgid "intent-form-intro-7"
 msgstr ""
 
 #. Default: <dynamic element>
-#: c3sintent/templates/intent.pt:40
+#: c3sintent/templates/intent.pt:54
 msgid "intent-form-disclaimer-link"
 msgstr ""
 
-#. Default: At first, please get information about the C3S and its aims, and then
-#. we can get going!
-#: c3sintent/templates/intent.pt:43
+#. Default: information about C3S
+#: c3sintent/templates/intent.pt:58
+msgid "information_about_C3S"
+msgstr ""
+
+#. Default: At first, please get ${information_about_C3S} and its aims, and then we
+#. can get going!
+#: c3sintent/templates/intent.pt:57
 msgid "intent-form-reading-instructions"
 msgstr ""
 
-#. Default: Please answer all questions:
-#: c3sintent/templates/intent.pt:46
+#. Default: all
+#: c3sintent/templates/intent.pt:63
+msgid "all"
+msgstr ""
+
+#. Default: Please answer ${all} questions:
+#: c3sintent/templates/intent.pt:62
 msgid "intent-form-answer-all"
 msgstr ""
 

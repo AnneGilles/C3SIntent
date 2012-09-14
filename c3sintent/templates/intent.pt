@@ -55,10 +55,12 @@ By sending an email to data@c3s.cc you may order your data to be deleted at any 
       <strong><a href="http://www.c3s.cc/disclaimer-en.html" target="_blank">http://www.c3s.cc/disclaimer-en.html</a></strong>
     </p>
     <p i18n:translate="intent-form-reading-instructions">
-      At first, please get <a href="http://www.c3s.cc/index_en.html" target="_blank">information about C3S</a> and its aims, and then we can get going!
+      At first, please get <a href="http://www.c3s.cc/index_en.html" target="_blank"
+			      i18n:name="information_about_C3S"
+			      i18n:translate="information_about_C3S">information about C3S</a> and its aims, and then we can get going!
     </p>
     <p i18n:translate="intent-form-answer-all">
-      Please answer <strong>all</strong> questions:
+      Please answer <strong i18n:name="all" i18n:translate="all">all</strong> questions:
     </p>
     <div id="form" tal:content="structure form"/>
   </tal:block>
