@@ -160,27 +160,32 @@ def generate_csv(appstruct):
     return str(csv.read())
 
 
-def accountant_mail(appstruct):
+def make_mail_body(appstruct):
+    """
+    construct a multiline string to be used as the emails body
+    """
+    the_activities = ''
+    for x in appstruct['activity']:
+        the_activities += x + ', '
     unencrypted = u"""
 Yay!
 we got a declaration of intent through the form: \n
-firstname:    \t\t %s
-lastname:     \t\t %s
-email:        \t\t %s
-street & no:  \t\t %s
-address2:     \t\t %s
-postcode:     \t\t %s
-city:         \t\t %s
-country:      \t\t %s
-region:      \t\t %s
+firstname:                      %s
+lastname:                       %s
+email:                          %s
+street & no:                    %s
+address2:                       %s
+postcode:                       %s
+city:                           %s
+country:                        %s
+region:                         %s
 
-activities:   \t\t %s
-created3:     \t\t $s
-member of collecting society:  %s
-
-understood declaration text:  %s
-consider joining     \t %s
-noticed data protection: \t %s
+activities:                     %s
+created3:                       %s
+member of coll. soc.:           %s
+understood declaration:         %s
+consider joining                %s
+noticed data protection:        %s
 
 that's it.. bye!""" % (
         unicode(appstruct['firstname']),
@@ -192,12 +197,20 @@ that's it.. bye!""" % (
         unicode(appstruct['city']),
         unicode(appstruct['country']),
         unicode(appstruct['region']),
+        the_activities,
         unicode(appstruct['at_least_three_works']),
         unicode(appstruct['member_of_colsoc']),
         unicode(appstruct['understood_declaration']),
         unicode(appstruct['consider_joining']),
         unicode(appstruct['noticed_dataProtection']),
         )
+
+    return unencrypted
+
+
+def accountant_mail(appstruct):
+
+    unencrypted = make_mail_body(appstruct)
 
     message = Message(
         subject="[c3s] Yes! a new letter of intent",

@@ -163,6 +163,54 @@ class TestUtilities(unittest.TestCase):
                           'john@example.com;In the Middle;Of Nowhere;' +
                           '12345;My Town;Hessen;de;j;n;n;n;n;j;j;j;j;j;j'))
 
+    def test_mail_body(self):
+        """
+        test if mail body is constructed correctly
+        and if umlauts work
+        """
+        from c3sintent.utils import make_mail_body
+        my_appstruct = {
+            'activity': ['composer', 'dj'],
+            'firstname': u'John',
+            'lastname': u'Döe',
+            'address1': u'In the Middle',
+            'address2': u'Of Nowhereß',
+            'postCode': u'12345',
+            'city': u'Town',
+            'email': u'john@example.com',
+            'region': u'Hessen',
+            'country': 'af',
+            'at_least_three_works': 'yes',
+            'member_of_colsoc': 'yes',
+            'understood_declaration': 'yes',
+            'consider_joining': 'yes',
+            'noticed_dataProtection': 'yes'
+            }
+        result = make_mail_body(my_appstruct)
+        #print(result)
+        self.failUnless(u'composer, ' in unicode(result))
+        self.failUnless(u'dj, ' in unicode(result))
+        self.failUnless(u'John' in unicode(result))
+        self.failUnless(u'Döe' in unicode(result))
+        self.failUnless(u'In the Middle' in unicode(result))
+        self.failUnless(u'Of Nowhereß' in unicode(result))
+        self.failUnless(u'12345' in unicode(result))
+        self.failUnless(u'Town' in unicode(result))
+        self.failUnless(u'john@example.com' in unicode(result))
+        self.failUnless(u'Hessen' in unicode(result))
+        self.failUnless(u'af' in unicode(result))
+        self.failUnless(
+            u'created3:                       yes' in unicode(result))
+        self.failUnless(
+            u'member of coll. soc.:           yes' in unicode(result))
+        self.failUnless(
+            u'understood declaration:         yes' in unicode(result))
+        self.failUnless(
+            u'consider joining                yes' in unicode(result))
+        self.failUnless(
+            u'noticed data protection:        yes' in unicode(result))
+        self.failUnless(u"that's it.. bye!" in unicode(result))
+
     def test_accountant_mail(self):
         """
         test encryption of email payload
