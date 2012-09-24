@@ -49,3 +49,16 @@ will download the relevant .po files
   python setup.py compile_catalog
 
 will then compile the .po files to .mo files usable by the apps translation machinery.
+
+
+Advanced: i18n for developers
+=============================
+
+What if your message extraction yields <dynamic element> tags in the PO files?
+Check out Wicherts answer to a "feature request":
+
+  https://github.com/wichert/lingua/issues/12
+
+Something to study from the plonistas:
+
+  http://plone.org/documentation/kb/i18n-for-developers
