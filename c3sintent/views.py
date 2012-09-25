@@ -226,9 +226,9 @@ def declare_intent(request):
                 allow_duplicate=False)
             return{'form': e.render()}
 
-        # send mail to accountants
+        # send mail to accountants // prepare a mailer
         mailer = get_mailer(request)
-
+        # prepare mail
         the_mail = accountant_mail(appstruct)
         mailer.send(the_mail)
 
