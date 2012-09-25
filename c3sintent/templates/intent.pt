@@ -24,6 +24,10 @@
 				   alt="switch to English language" /></a>
       <a href="/?_LOCALE_=de"><img src="static/images/de.png" title="Deutsch"
 				   alt="auf deutsche Sprache umschalten" /></a>
+      <a href="/?_LOCALE_=es"><img src="static/images/es.png" title="Espanol"
+				   alt="Espanol" /></a>
+      <a href="/?_LOCALE_=fr"><img src="static/images/fr.png" title="Francais"
+				   alt="Francais" /></a>
     </div>
     <p>
       <strong i18n:translate="intent-form-note">
