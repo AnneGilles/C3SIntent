@@ -106,6 +106,7 @@ def declare_intent(request):
     LOCALE_COUNTRY_MAPPING = {
         'de': 'DE',
         'en': 'GB',
+        'es': 'ES',
         'fr': 'FR',
         }
     country_default = LOCALE_COUNTRY_MAPPING.get(locale_name)
