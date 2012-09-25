@@ -110,6 +110,9 @@ def declare_intent(request):
         'fr': 'FR',
         }
     country_default = LOCALE_COUNTRY_MAPPING.get(locale_name)
+    if DEBUG:  # pragma: no cover
+        print("== locale is :" + str(locale_name))
+        print("== choosing :" + str(country_default))
 
     class DeclarationOfIntent(colander.MappingSchema):
         """
