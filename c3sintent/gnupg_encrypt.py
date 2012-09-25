@@ -28,7 +28,7 @@ def encrypt_with_gnupg(data):
 #    print(keyfolder)
 # TODO: check for a better way to do this:
 # do we really need to create a new tempdir for every run? no!
-# but hey as long as we neet to run both as 'normal' user (while testing
+# but hey as long as we need to run both as 'normal' user (while testing
 # on port 6544) and as www-data (apache) we do need separate folders,
 # because only the creator may access it.
 # however: as long as this is reasonably fast, we can live with it. for now...
