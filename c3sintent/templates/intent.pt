@@ -11,7 +11,7 @@
     <script type="text/javascript" src="/static/deform/deform.js"></script>
   </tal:block>
   <tal:block metal:fill-slot="middle">
-    <h1 i18n:translate="membership-form">Declaration of intent to join Cultural Commons Collecting Society (C3S)</h1>
+    <h1 i18n:translate="intent-form-title">Declaration of intent to join Cultural Commons Collecting Society (C3S)</h1>
   </tal:block>
   <tal:block metal:fill-slot="bottom">
     <div style="text-align:left;">
