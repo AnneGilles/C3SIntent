@@ -6,7 +6,6 @@ from c3sintent.utils import (
     )
 from pkg_resources import resource_filename
 import colander
-from webhelpers import constants
 import deform
 from deform import (
     ValidationFailure,
@@ -35,7 +34,6 @@ _ = TranslationStringFactory('C3Sintent')
 def translator(term):
     #print("=== this is def translator")
     return get_localizer(get_current_request()).translate(term)
-
 
 my_template_dir = resource_filename('c3sintent', 'templates/')
 deform_template_dir = resource_filename('deform', 'templates/')
@@ -171,7 +169,8 @@ def declare_intent(request):
                                       title=_(u'Country'),
                                       default=country_default,
                                       widget=deform.widget.SelectWidget(
-                values=constants.country_codes()),)
+                values=country_codes),)
+        #print(country_codes())
         understood_declaration = colander.SchemaNode(
             colander.String(),
             title=_(u'I have read and understood the text of the '
