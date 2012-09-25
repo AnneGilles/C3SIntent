@@ -70,7 +70,39 @@ def declare_intent(request):
     if DEBUG:  # pragma: no cover
         print "-- locale_name: " + str(locale_name)
 
-    # set default of Country select widget according to locale
+    country_codes = [
+        ('AT', _(u'Austria')),
+        ('BE', _(u'Belgium')),
+        ('BG', _(u'Bulgaria')),
+        ('CH', _(u'Switzerland')),
+        ('HR', _(u'Croatia')),
+        ('CZ', _(u'Czech Republic')),
+        ('DE', _(u'Germany')),
+        ('DK', _(u'Denmark')),
+        ('ES', _(u'Spain')),
+        ('EE', _(u'Estonia')),
+        ('FI', _(u'Finland')),
+        ('FR', _(u'France')),
+        ('GB', _(u'United Kingdom')),
+        ('GR', _(u'Greece')),
+        ('HU', _(u'Hungary')),
+        ('HR', _(u'Croatia')),
+        ('IL', _(u'Israel')),
+        ('IE', _(u'Ireland')),
+        ('IT', _(u'Italy')),
+        ('LT', _(u'Lithuania')),
+        ('LV', _(u'Latvia')),
+        ('LU', _(u'Luxembourg')),
+        ('MT', _(u'Malta')),
+        ('NL', _(u'Netherlands')),
+        ('PL', _(u'Poland')),
+        ('PT', _(u'Portugal')),
+        ('SK', _(u'Slovakia')),
+        ('SI', _(u'Slovenia')),
+        ('SE', _(u'Sweden'))
+        ]
+
+   # set default of Country select widget according to locale
     LOCALE_COUNTRY_MAPPING = {
         'de': 'DE',
         'en': 'GB',
