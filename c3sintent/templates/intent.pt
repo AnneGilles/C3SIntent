@@ -59,7 +59,7 @@ By sending an email to data@c3s.cc you may order your data to be deleted at any 
       <a href="/disclaimer" target="_blank">Disclaimer (Data Protection)</a>
     </p>
     <p i18n:translate="intent-form-reading-instructions">
-      At first, please get <a href="http://www.c3s.cc/index_en.html" target="_blank"
+      At first, please get <a href="http://www.c3s.cc" target="_blank"
 			      i18n:name="information_about_C3S"
 			      i18n:translate="information_about_C3S">information about C3S</a> and its aims, and then we can get going!
     </p>
