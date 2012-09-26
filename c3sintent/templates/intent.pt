@@ -55,7 +55,7 @@ You are allowed to currently be a member of a different collecting society – a
     <p i18n:translate="intent-form-intro-7">
 By sending an email to data@c3s.cc you may order your data to be deleted at any time, and without giving reasons. Upon request to the same address, you may also ask for information about the data we have stored about you. However, a deletion of your data will have the result that we can not get in touch with you, should you wish to join the collecting society. You can read the details about how we handle your data (Data Protection Declaration) separately on our website:
     </p>
-    <p>
+    <p i18n:translate="">
       <a href="/disclaimer" target="_blank" 
 	 i18n:name="intent-form-disclaimer-title"
 	 i18n:translate="intent-form-disclaimer-title">Disclaimer (Data Protection)</a>
