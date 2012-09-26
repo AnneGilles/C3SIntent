@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: C3Sintent 0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2012-09-26 00:34+0200\n"
+"POT-Creation-Date: 2012-09-26 03:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,231 +17,289 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
 
-#: c3sintent/constants.py:26 c3sintent/views.py:72
+#: c3sintent/views.py:80
 msgid "Austria"
 msgstr ""
 
-#: c3sintent/constants.py:27 c3sintent/views.py:73
+#: c3sintent/views.py:81
 msgid "Belgium"
 msgstr ""
 
-#: c3sintent/constants.py:28 c3sintent/views.py:74
+#: c3sintent/views.py:82
 msgid "Bulgaria"
 msgstr ""
 
-#: c3sintent/constants.py:29 c3sintent/views.py:75
+#: c3sintent/views.py:83
 msgid "Switzerland"
 msgstr ""
 
-#: c3sintent/constants.py:30 c3sintent/constants.py:41 c3sintent/views.py:76
-#: c3sintent/views.py:87
-msgid "Croatia"
-msgstr ""
-
-#: c3sintent/constants.py:31 c3sintent/views.py:77
+#: c3sintent/views.py:84
 msgid "Czech Republic"
 msgstr ""
 
-#: c3sintent/constants.py:32 c3sintent/views.py:78
+#: c3sintent/views.py:85
 msgid "Germany"
 msgstr ""
 
-#: c3sintent/constants.py:33 c3sintent/views.py:79
+#: c3sintent/views.py:86
 msgid "Denmark"
 msgstr ""
 
-#: c3sintent/constants.py:34 c3sintent/views.py:80
+#: c3sintent/views.py:87
 msgid "Spain"
 msgstr ""
 
-#: c3sintent/constants.py:35 c3sintent/views.py:81
+#: c3sintent/views.py:88
 msgid "Estonia"
 msgstr ""
 
-#: c3sintent/constants.py:36 c3sintent/views.py:82
+#: c3sintent/views.py:89
 msgid "Finland"
 msgstr ""
 
-#: c3sintent/constants.py:37 c3sintent/views.py:83
+#: c3sintent/views.py:90
 msgid "France"
 msgstr ""
 
-#: c3sintent/constants.py:38 c3sintent/views.py:84
+#: c3sintent/views.py:91
 msgid "United Kingdom"
 msgstr ""
 
-#: c3sintent/constants.py:39 c3sintent/views.py:85
+#: c3sintent/views.py:92
 msgid "Greece"
 msgstr ""
 
-#: c3sintent/constants.py:40 c3sintent/views.py:86
+#: c3sintent/views.py:93
 msgid "Hungary"
 msgstr ""
 
-#: c3sintent/constants.py:42 c3sintent/views.py:88
+#: c3sintent/views.py:94
+msgid "Croatia"
+msgstr ""
+
+#: c3sintent/views.py:95
 msgid "Israel"
 msgstr ""
 
-#: c3sintent/constants.py:43 c3sintent/views.py:89
+#: c3sintent/views.py:96
 msgid "Ireland"
 msgstr ""
 
-#: c3sintent/constants.py:44 c3sintent/views.py:90
+#: c3sintent/views.py:97
 msgid "Italy"
 msgstr ""
 
-#: c3sintent/constants.py:45 c3sintent/views.py:91
+#: c3sintent/views.py:98
 msgid "Lithuania"
 msgstr ""
 
-#: c3sintent/constants.py:46 c3sintent/views.py:92
+#: c3sintent/views.py:99
 msgid "Latvia"
 msgstr ""
 
-#: c3sintent/constants.py:47 c3sintent/views.py:93
+#: c3sintent/views.py:100
 msgid "Luxembourg"
 msgstr ""
 
-#: c3sintent/constants.py:48 c3sintent/views.py:94
+#: c3sintent/views.py:101
 msgid "Malta"
 msgstr ""
 
-#: c3sintent/constants.py:49 c3sintent/views.py:95
+#: c3sintent/views.py:102
 msgid "Netherlands"
 msgstr ""
 
-#: c3sintent/constants.py:50 c3sintent/views.py:96
+#: c3sintent/views.py:103
 msgid "Poland"
 msgstr ""
 
-#: c3sintent/constants.py:51 c3sintent/views.py:97
+#: c3sintent/views.py:104
 msgid "Portugal"
 msgstr ""
 
-#: c3sintent/constants.py:52 c3sintent/views.py:98
+#: c3sintent/views.py:105
 msgid "Slovakia"
 msgstr ""
 
-#: c3sintent/constants.py:53 c3sintent/views.py:99
+#: c3sintent/views.py:106
 msgid "Slovenia"
 msgstr ""
 
-#: c3sintent/constants.py:54 c3sintent/views.py:100
+#: c3sintent/views.py:107
 msgid "Sweden"
 msgstr ""
 
-#: c3sintent/views.py:120
+#: c3sintent/views.py:127
 msgid "First Name"
 msgstr ""
 
-#: c3sintent/views.py:122
+#: c3sintent/views.py:129
 msgid "Last Name"
 msgstr ""
 
-#: c3sintent/views.py:123
+#: c3sintent/views.py:130
 msgid "composer"
 msgstr ""
 
-#: c3sintent/views.py:124
+#: c3sintent/views.py:131
 msgid "lyricist"
 msgstr ""
 
-#: c3sintent/views.py:125
+#: c3sintent/views.py:132
 msgid "musician"
 msgstr ""
 
-#: c3sintent/views.py:126
+#: c3sintent/views.py:133
 msgid "music producer"
 msgstr ""
 
-#: c3sintent/views.py:127
+#: c3sintent/views.py:134
 msgid "remixer"
 msgstr ""
 
-#: c3sintent/views.py:128
+#: c3sintent/views.py:135
 msgid "DJ"
 msgstr ""
 
-#: c3sintent/views.py:132
+#: c3sintent/views.py:139
 msgid "Yes, I am musically active as a (multiple selection possible)"
 msgstr ""
 
-#: c3sintent/views.py:137 c3sintent/views.py:180 c3sintent/views.py:188
-#: c3sintent/views.py:198
+#: c3sintent/views.py:144 c3sintent/views.py:187 c3sintent/views.py:195
+#: c3sintent/views.py:205
 msgid "Yes"
 msgstr ""
 
-#: c3sintent/views.py:138
+#: c3sintent/views.py:145
 msgid "No"
 msgstr ""
 
-#: c3sintent/views.py:142
+#: c3sintent/views.py:149
 msgid ""
 "I have been the (co-)creator of at least three titles in one of the functions"
 " mentioned under (1)"
 msgstr ""
 
-#: c3sintent/views.py:148
+#: c3sintent/views.py:155
 msgid "I am a member of a collecting society."
 msgstr ""
 
-#: c3sintent/views.py:153
+#: c3sintent/views.py:160
 msgid "Email"
 msgstr ""
 
-#: c3sintent/views.py:156
+#: c3sintent/views.py:163
 msgid "Street & No."
 msgstr ""
 
-#: c3sintent/views.py:159
+#: c3sintent/views.py:166
 msgid "address cont'd"
 msgstr ""
 
-#: c3sintent/views.py:161
+#: c3sintent/views.py:168
 msgid "Post Code"
 msgstr ""
 
-#: c3sintent/views.py:163
+#: c3sintent/views.py:170
 msgid "City"
 msgstr ""
 
-#: c3sintent/views.py:166
+#: c3sintent/views.py:173
 msgid "Federal State / Province / County"
 msgstr ""
 
-#: c3sintent/views.py:169
+#: c3sintent/views.py:176
 msgid "Country"
 msgstr ""
 
-#: c3sintent/views.py:176
+#: c3sintent/views.py:183
 msgid "I have read and understood the text of the declaration of intent."
 msgstr ""
 
-#: c3sintent/views.py:184
+#: c3sintent/views.py:191
 msgid ""
 "I seriously consider to join the C3S and want to be notified via e-mail about"
 " its foundation."
 msgstr ""
 
-#: c3sintent/views.py:192
+#: c3sintent/views.py:199
 msgid ""
 "I have taken note of the Data Protection Declaration which is part of this "
 "text and can be read separately at http://www.c3s.cc/disclaimer-en.html and "
 "agree with it. I know that I may revoke this consent at any time."
 msgstr ""
 
-#: c3sintent/views.py:207
+#: c3sintent/views.py:214
 msgid "Submit"
 msgstr ""
 
-#: c3sintent/views.py:222
+#: c3sintent/views.py:229
 msgid "Please note: There were errors, please check the form below."
 msgstr ""
 
 #. Default: Declaration of Intent to Join Cultural Commons Collecting Society (C3S)
-#. Default: Declaration of intent to join Cultural Commons Collecting Society (C3S)
 #: c3sintent/templates/base.pt:7 c3sintent/templates/intent.pt:14
 msgid "intent-form-title"
+msgstr ""
+
+#. Default: Data Protection Declaration
+#: c3sintent/templates/disclaimer.pt:9
+msgid "disclaimer-title"
+msgstr ""
+
+#. Default: After it has been founded, we will use the data you have provided in
+#. the declaration of intent to join the Cultural Commons Collecting Society (C3S)
+#. in order to ask you whether you really want to become a member. If not, your
+#. declaration will be deleted. It will also be deleted if you have second thoughts
+#. and notify us in writing that you wish to withdraw your declaration.
+#: c3sintent/templates/disclaimer.pt:22
+msgid "disclaimer-paragraph-1"
+msgstr ""
+
+#. Default: In order to prevent falsifications, we will ask you not only for your
+#. name, but also for your e-mail and postal addresses, as it is done in petitions,
+#. too. Of course we will only use your data for the application to the German
+#. Patent and Trademark Office and will neither pass them on to third parties, nor
+#. use them for other purposes, or publish them. They will be stored in Germany by
+#. the registered association OpenMusicContest.org as representative of the C3S
+#. foundation initiative, according to the requirements of the Federal Data
+#. Protection Act.
+#: c3sintent/templates/disclaimer.pt:25
+msgid "disclaimer-paragraph-2"
+msgstr ""
+
+#. Default: By sending an e-mail to
+#: c3sintent/templates/disclaimer.pt:28
+msgid "disclaimer-paragraph-3-part1"
+msgstr ""
+
+#. Default: you may order your data to be deleted at any time, and without giving
+#. reasons. Upon request to the same address, you may also ask for information
+#. about the data we have stored about you. However, a deletion of your data will
+#. have the result that we can not get in touch with you, should you wish to join
+#. the collecting society.
+#: c3sintent/templates/disclaimer.pt:34
+msgid "disclaimer-paragraph-3-part2"
+msgstr ""
+
+#. Default: The Cultural Commons Collecting Society is a project of:
+#: c3sintent/templates/disclaimer.pt:37
+msgid "disclaimer-paragraph-4"
+msgstr ""
+
+#. Default: Authorised to represent:
+#: c3sintent/templates/disclaimer.pt:48
+msgid "disclaimer-paragraph-5"
+msgstr ""
+
+#. Default: imprint of the OpenMusicContest.org e.V.
+#: c3sintent/templates/disclaimer.pt:61
+msgid "OMC-imprint-link-title"
+msgstr ""
+
+#. Default: See the ${OMC-imprint-link-title} for more information.
+#: c3sintent/templates/disclaimer.pt:60
+msgid "disclaimer-paragraph-6"
 msgstr ""
 
 #. Default: After submitting the form below, you will be presented with a PDF
@@ -316,34 +374,34 @@ msgstr ""
 #. you. However, a deletion of your data will have the result that we can not get
 #. in touch with you, should you wish to join the collecting society. You can read
 #. the details about how we handle your data (Data Protection Declaration)
-#. separately on our website at
+#. separately on our website:
 #: c3sintent/templates/intent.pt:55
 msgid "intent-form-intro-7"
 msgstr ""
 
-#. Default: <dynamic element>
-#: c3sintent/templates/intent.pt:58
-msgid "intent-form-disclaimer-link"
+#. Default: Disclaimer (Data Protection)
+#: c3sintent/templates/intent.pt:59
+msgid "intent-form-disclaimer-title"
 msgstr ""
 
 #. Default: information about C3S
-#: c3sintent/templates/intent.pt:62
+#: c3sintent/templates/intent.pt:64
 msgid "information_about_C3S"
 msgstr ""
 
 #. Default: At first, please get ${information_about_C3S} and its aims, and then we
 #. can get going!
-#: c3sintent/templates/intent.pt:61
+#: c3sintent/templates/intent.pt:63
 msgid "intent-form-reading-instructions"
 msgstr ""
 
 #. Default: all
-#: c3sintent/templates/intent.pt:67
+#: c3sintent/templates/intent.pt:69
 msgid "all"
 msgstr ""
 
 #. Default: Please answer ${all} questions:
-#: c3sintent/templates/intent.pt:66
+#: c3sintent/templates/intent.pt:68
 msgid "intent-form-answer-all"
 msgstr ""
 
