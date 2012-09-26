@@ -29,6 +29,7 @@ def main(global_config, **settings):
     # home /
     # intent form
     config.add_route('intent', '/')
+    config.add_route('disclaimer', '/disclaimer')
 
     config.scan()
     return config.make_wsgi_app()

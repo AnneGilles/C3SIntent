@@ -50,6 +50,14 @@ zpt_renderer = deform.ZPTRendererFactory(
 DEBUG = False
 
 
+@view_config(renderer='templates/disclaimer.pt',
+             route_name='disclaimer')
+def show_disclaimer(request):
+
+#    locale_name = get_locale_name(request)
+    return {'foo': 'bar'}
+
+
 @view_config(renderer='templates/intent.pt',
              route_name='intent')
 def declare_intent(request):
@@ -73,7 +81,6 @@ def declare_intent(request):
         ('BE', _(u'Belgium')),
         ('BG', _(u'Bulgaria')),
         ('CH', _(u'Switzerland')),
-        ('HR', _(u'Croatia')),
         ('CZ', _(u'Czech Republic')),
         ('DE', _(u'Germany')),
         ('DK', _(u'Denmark')),
