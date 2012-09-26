@@ -10,13 +10,13 @@
   </tal:block>
   <tal:block metal:fill-slot="bottom">
     <div style="text-align:right;">
-      <a href="/?_LOCALE_=en"><img src="static/images/en.png" title="English"
+      <a href="/disclaimer?_LOCALE_=en"><img src="static/images/en.png" title="English"
 				   alt="switch to English language" /></a>
-      <a href="/?_LOCALE_=de"><img src="static/images/de.png" title="Deutsch"
+      <a href="/disclaimer?_LOCALE_=de"><img src="static/images/de.png" title="Deutsch"
 				   alt="auf deutsche Sprache umschalten" /></a>
-      <a href="/?_LOCALE_=es"><img src="static/images/es.png" title="Espanol"
+      <a href="/disclaimer?_LOCALE_=es"><img src="static/images/es.png" title="Espanol"
 				   alt="Espanol" /></a>
-      <a href="/?_LOCALE_=fr"><img src="static/images/fr.png" title="Francais"
+      <a href="/disclaimer?_LOCALE_=fr"><img src="static/images/fr.png" title="Francais"
 				   alt="Francais" /></a>
     </div>
     <p i18n:translate="disclaimer-paragraph-1">
