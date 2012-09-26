@@ -54,7 +54,17 @@ DEBUG = False
              route_name='disclaimer')
 def show_disclaimer(request):
 
-#    locale_name = get_locale_name(request)
+    locale_name = get_locale_name(request)
+    # check if user clicked on language symbol to have page translated
+    #print("request.query_string: " + str(request.query_string))
+    from pyramid.httpexceptions import HTTPFound
+    if (request.query_string == '_LOCALE_=%s') or (
+        request.query_string == 'lang=%s') % (locale_name):
+        # set language cookie
+        request.response.set_cookie('_LOCALE_', locale_name)
+        return HTTPFound(location=request.route_url('disclaimer'),
+                         headers=request.response.headers)
+
     return {'foo': 'bar'}
 
 
@@ -67,7 +77,8 @@ def declare_intent(request):
     # check if user clicked on language symbol to have page translated
     #print("request.query_string: " + str(request.query_string))
     from pyramid.httpexceptions import HTTPFound
-    if request.query_string == '_LOCALE_=%s' % (locale_name):
+    if (request.query_string == '_LOCALE_=%s') or (
+        request.query_string == 'lang=%s') % (locale_name):
         # set language cookie
         request.response.set_cookie('_LOCALE_', locale_name)
         return HTTPFound(location=request.route_url('intent'),
