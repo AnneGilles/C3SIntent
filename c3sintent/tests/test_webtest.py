@@ -99,3 +99,29 @@ class FunctionalTests(unittest.TestCase):
         self.failUnless('Bei Antragstellung zur Zulassung als' in res2.body)
         # test for german translation of form field label (lingua_python)
         self.failUnless('Texter' in res2.body)
+
+    def test_disclaimer_lang_en(self):
+        """load the disclaimer, check english string exists"""
+        res = self.testapp.reset()
+        res = self.testapp.get('/disclaimer?_LOCALE_=en', status=302)
+        self.failUnless('The resource was found at' in res.body)
+        # we are being redirected...
+        res1 = res.follow()
+
+        self.failUnless(
+            'you may order your data to be deleted at any time' in str(
+                res1.body),
+            'expected string was not found in web UI')
+
+    def test_disclaimer_lang_de(self):
+        """load the disclaimer, check german string exists"""
+        res = self.testapp.reset()
+        res = self.testapp.get('/disclaimer?_LOCALE_=de', status=302)
+        self.failUnless('The resource was found at' in res.body)
+        # we are being redirected...
+        res1 = res.follow()
+
+        self.failUnless(
+            'Die mit der Absichtserklärung zum geplanten Beitritt der' in str(
+                res1.body),
+            'expected string was not found in web UI')
