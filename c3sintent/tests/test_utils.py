@@ -238,8 +238,12 @@ class TestUtilities(unittest.TestCase):
 
         self.assertTrue(isinstance(result, Message))
         self.assertTrue('c@c3s.cc' in result.recipients)
-        self.assertTrue('-----BEGIN PGP MESSAGE-----' in result.body)
-        self.assertTrue('-----END PGP MESSAGE-----' in result.body)
-        self.assertTrue(
-            '[c3s] Yes! a new letter of intent' in result.subject)
-        self.assertEquals('noreply@c3s.cc', result.sender)
+        self.failUnless('-----BEGIN PGP MESSAGE-----' in result.body,
+                        'something missing in the mail body!')
+        self.failUnless('-----END PGP MESSAGE-----' in result.body,
+                        'something missing in the mail body!')
+        self.failUnless(
+            '[c3s] Yes! a new letter of intent' in result.subject,
+                        'something missing in the mail body!')
+        self.failUnless('noreply@c3s.cc' == result.sender,
+                        'something missing in the mail body!')
