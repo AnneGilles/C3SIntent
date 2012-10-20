@@ -1,12 +1,12 @@
-C3SIntent README
-
+C3Sintent README
+================
 This webapp offers a form to submit and declare an artists intention to join 
-Cultural Commons Collecting Society (C3S) as member. A GnuPG encrypted mail 
-with the details submitted will be sent to C3S.
+*Cultural Commons Collecting Society (C3S)* as member. A GnuPG encrypted mail 
+with the details submitted will be sent to C3S. 
 
 
 setup
-=====
+-----
 
 create a virtualenv, preferrably with the python 2.7 variant:
 
@@ -24,12 +24,14 @@ this will take a little while and install all necessary dependencies.
 
 
 run (in development mode)
-=========================
+-------------------------
 
 $ pserve development.ini --reload
 
+The app will rebuild templates and reload code whenever it changes.
 
-run (in production mode)
-========================
 
-$ pserve production.ini
+run (in production mode, daemon mode)
+-------------------------------------
+
+$ pserve production.ini start
