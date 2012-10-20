@@ -3,27 +3,26 @@
 # This file is distributed under the same license as the C3Sintent project.
 # 
 # Translators:
-# <a@shri.de>, 2012.
 #   <a@shri.de>, 2012.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#   <villum@autofunk.dk>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: C3S Declaration of Intent\n"
 "Report-Msgid-Bugs-To: https://github.com/AnneGilles/C3SIntent/issues\n"
 "POT-Creation-Date: 2012-09-26 03:17+0200\n"
-"PO-Revision-Date: 2012-09-26 19:31+0000\n"
+"PO-Revision-Date: 2012-10-18 13:52+0000\n"
 "Last-Translator: AnneGilles <a@shri.de>\n"
-"Language-Team: German <translations@openmusiccontest.org>\n"
+"Language-Team: Danish (http://www.transifex.com/projects/p/C3Sintent/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 0.9.6\n"
-"Language: de\n"
+"Language: da\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: c3sintent/views.py:80
 msgid "Austria"
-msgstr "Österreich"
+msgstr "Østrig"
 
 #: c3sintent/views.py:81
 msgid "Belgium"
@@ -39,15 +38,15 @@ msgstr "Schweiz"
 
 #: c3sintent/views.py:84
 msgid "Czech Republic"
-msgstr "Tschechische Republik"
+msgstr "Tjekkiet"
 
 #: c3sintent/views.py:85
 msgid "Germany"
-msgstr "Deutschland"
+msgstr "Tyskland"
 
 #: c3sintent/views.py:86
 msgid "Denmark"
-msgstr "Dänemark"
+msgstr "Danmark"
 
 #: c3sintent/views.py:87
 msgid "Spain"
@@ -59,19 +58,19 @@ msgstr "Estland"
 
 #: c3sintent/views.py:89
 msgid "Finland"
-msgstr "Finnland"
+msgstr "Finland"
 
 #: c3sintent/views.py:90
 msgid "France"
-msgstr "Frankreich"
+msgstr "Frankrig"
 
 #: c3sintent/views.py:91
 msgid "United Kingdom"
-msgstr "Vereinigtes Königreich"
+msgstr "Storbritanien"
 
 #: c3sintent/views.py:92
 msgid "Greece"
-msgstr "Griechenland"
+msgstr "Grækenland"
 
 #: c3sintent/views.py:93
 msgid "Hungary"
@@ -99,11 +98,11 @@ msgstr "Litauen"
 
 #: c3sintent/views.py:99
 msgid "Latvia"
-msgstr "Lettland"
+msgstr "Letland"
 
 #: c3sintent/views.py:100
 msgid "Luxembourg"
-msgstr "Luxemburg"
+msgstr "Luxembourg"
 
 #: c3sintent/views.py:101
 msgid "Malta"
@@ -111,7 +110,7 @@ msgstr "Malta"
 
 #: c3sintent/views.py:102
 msgid "Netherlands"
-msgstr "Niederlande"
+msgstr "Holland"
 
 #: c3sintent/views.py:103
 msgid "Poland"
@@ -123,7 +122,7 @@ msgstr "Portugal"
 
 #: c3sintent/views.py:105
 msgid "Slovakia"
-msgstr "Slovakei"
+msgstr "Slovakiet"
 
 #: c3sintent/views.py:106
 msgid "Slovenia"
@@ -131,35 +130,35 @@ msgstr "Slovenien"
 
 #: c3sintent/views.py:107
 msgid "Sweden"
-msgstr "Schweden"
+msgstr "Sverige"
 
 #: c3sintent/views.py:127
 msgid "First Name"
-msgstr "Vorname"
+msgstr "Fornavn"
 
 #: c3sintent/views.py:129
 msgid "Last Name"
-msgstr "Nachname"
+msgstr "Efternavn"
 
 #: c3sintent/views.py:130
 msgid "composer"
-msgstr "Komponist"
+msgstr "komponist"
 
 #: c3sintent/views.py:131
 msgid "lyricist"
-msgstr "Texter"
+msgstr "tekstforfatter"
 
 #: c3sintent/views.py:132
 msgid "musician"
-msgstr "Musiker"
+msgstr "musiker"
 
 #: c3sintent/views.py:133
 msgid "music producer"
-msgstr "Musikproduzent"
+msgstr "musikproducer"
 
 #: c3sintent/views.py:134
 msgid "remixer"
-msgstr "Remixer"
+msgstr "remixer"
 
 #: c3sintent/views.py:135
 msgid "DJ"
@@ -167,7 +166,7 @@ msgstr "DJ"
 
 #: c3sintent/views.py:139
 msgid "Yes, I am musically active as a (multiple selection possible)"
-msgstr "Ja, ich bin musikalisch kreativ tätig als (Mehrfachauswahl möglich)"
+msgstr "Ja, jeg er musikalsk aktiv som (markér gerne flere)"
 
 #: c3sintent/views.py:144 c3sintent/views.py:187 c3sintent/views.py:195
 #: c3sintent/views.py:205
@@ -176,17 +175,17 @@ msgstr "Ja"
 
 #: c3sintent/views.py:145
 msgid "No"
-msgstr "Nein"
+msgstr "No"
 
 #: c3sintent/views.py:149
 msgid ""
 "I have been the (co-)creator of at least three titles in one of the "
 "functions mentioned under (1)"
-msgstr "Ich bin an mindestens drei Titeln kreativ beteiligt gewesen in einer der unter (1) genannten Funktionen."
+msgstr "Jeg er (med-)skaber af mindst tre titler i én af funktionerne nævnt i (1)."
 
 #: c3sintent/views.py:155
 msgid "I am a member of a collecting society."
-msgstr "Ich bin Mitglied einer Verwertungsgesellschaft."
+msgstr "Jeg er medlem af et indsamlingsforbund."
 
 #: c3sintent/views.py:160
 msgid "Email"
@@ -194,23 +193,23 @@ msgstr "Email"
 
 #: c3sintent/views.py:163
 msgid "Street & No."
-msgstr "Straße und Hausnummer"
+msgstr "Adresselinie 1"
 
 #: c3sintent/views.py:166
 msgid "address cont'd"
-msgstr "2. Addresszeile"
+msgstr "Adresselinie 2"
 
 #: c3sintent/views.py:168
 msgid "Post Code"
-msgstr "Postleitzahl"
+msgstr "Postnummer"
 
 #: c3sintent/views.py:170
 msgid "City"
-msgstr "Ort"
+msgstr "By"
 
 #: c3sintent/views.py:173
 msgid "Federal State / Province / County"
-msgstr "Bundesland / Kanton"
+msgstr "Region"
 
 #: c3sintent/views.py:176
 msgid "Country"
@@ -218,39 +217,39 @@ msgstr "Land"
 
 #: c3sintent/views.py:183
 msgid "I have read and understood the text of the declaration of intent."
-msgstr "Ich habe den Text der Absichtserklärung vollständig gelesen und verstanden."
+msgstr "Jeg har læst og forstået indholdet af Hensigtserklæringen"
 
 #: c3sintent/views.py:191
 msgid ""
 "I seriously consider to join the C3S and want to be notified via e-mail "
 "about its foundation."
-msgstr "Ja, ich ziehe den Eintritt in die C3S als Verwertungsgesellschaft ernsthaft in Betracht und möchte bei Gründung der C3S per Email kontaktiert werden."
+msgstr "Jeg overvejer på seriøst plan at melde mig ind i C3S og ønsker at blive informeret om dets stiftelse."
 
 #: c3sintent/views.py:199
 msgid ""
 "I have taken note of the Data Protection Declaration which is part of this "
 "text and can be read separately at http://www.c3s.cc/disclaimer-en.html and "
 "agree with it. I know that I may revoke this consent at any time."
-msgstr "Ja, ich habe die im Text der vorigen Seite enthaltene und unter http://www.c3s.cc/disclaimer-de.html abrufbare Datenschutzerklärung zur Kenntnis genommen, bin damit einverstanden, und weiß, dass ich dieses Einverständnis jederzeit widerrufen kann."
+msgstr "Jeg er bekendt med Databeskyttelseserklæringen, som er en integreret del af denne tekst, kan læses separat på adressen http://www.c3s.cc/disclaimer-dk.html, og er samtykkende omkring indholdet. Jeg er klar over at jeg kan tilbagetrække dette samtykke på ethvert tidspunkt."
 
 #: c3sintent/views.py:214
 msgid "Submit"
-msgstr "Absenden"
+msgstr "Indsend"
 
 #: c3sintent/views.py:229
 msgid "Please note: There were errors, please check the form below."
-msgstr "Bitte beachten: Es sind Fehler aufgetreten. Bitte das Formular unten kontrollieren."
+msgstr "Bemærk: Der er indtastet mangelfulde oplysninger, gennemgå venligst formularen nedenfor."
 
 #. Default: Declaration of Intent to Join Cultural Commons Collecting Society
 #. (C3S)
 #: c3sintent/templates/base.pt:7 c3sintent/templates/intent.pt:14
 msgid "intent-form-title"
-msgstr "Absichtserklärung zum geplanten Beitritt zur Cultural Commons Collecting Society (C3S)"
+msgstr ""
 
 #. Default: Data Protection Declaration
 #: c3sintent/templates/disclaimer.pt:9
 msgid "disclaimer-title"
-msgstr "Datenschutzerklärung"
+msgstr ""
 
 #. Default: After it has been founded, we will use the data you have provided
 #. in
@@ -263,7 +262,7 @@ msgstr "Datenschutzerklärung"
 #. and notify us in writing that you wish to withdraw your declaration.
 #: c3sintent/templates/disclaimer.pt:22
 msgid "disclaimer-paragraph-1"
-msgstr "Die mit der Absichtserklärung zum geplanten Beitritt der Cultural Commons Collecting Society (C3S) abgegebenen Daten nutzen wir nach Gründung der C3S, um Euch zu fragen, ob Ihr dann tatsächlich beitreten möchtet. Wenn nicht, wird Eure Erklärung gelöscht. Sie wird ebenfalls gelöscht, wenn Ihr Eure Absichtserklärung überdenkt und zurückziehen möchtet und uns das schriftlich mitteilt."
+msgstr ""
 
 #. Default: In order to prevent falsifications, we will ask you not only for
 #. your
@@ -280,12 +279,12 @@ msgstr "Die mit der Absichtserklärung zum geplanten Beitritt der Cultural Commo
 #. Protection Act.
 #: c3sintent/templates/disclaimer.pt:25
 msgid "disclaimer-paragraph-2"
-msgstr "Um Verfälschungen vorzubeugen, fragen wir - wie bei einer Petition - neben Eurem Namen auch Eure Postanschrift und E-Mail-Adresse ab. Selbstverständlich werden diese Daten außer bei der Antragstellung (an das Deutsche Patent- und Markenamt) weder an Dritte weitergegeben noch zu anderen Zwecken verwendet oder gar veröffentlicht. Die Speicherung erfolgt in Deutschland und entsprechend den Vorgaben des Bundesdatenschutzgesetzes durch den OpenMusicContest.org e.V. als Vertreter der C3S-Gründungsinitiative."
+msgstr ""
 
 #. Default: By sending an e-mail to
 #: c3sintent/templates/disclaimer.pt:28
 msgid "disclaimer-paragraph-3-part1"
-msgstr "Ihr könnt jederzeit und ohne Angabe von Gründen durch E-Mail an "
+msgstr ""
 
 #. Default: you may order your data to be deleted at any time, and without
 #. giving
@@ -297,27 +296,27 @@ msgstr "Ihr könnt jederzeit und ohne Angabe von Gründen durch E-Mail an "
 #. the collecting society.
 #: c3sintent/templates/disclaimer.pt:34
 msgid "disclaimer-paragraph-3-part2"
-msgstr "die Löschung Eurer bei uns gespeicherten Daten erreichen und durch eine Anfrage an diese Adresse auch Auskunft über die über Euch gespeicherten Daten verlangen. Eine Löschung bewirkt natürlich zugleich, dass wir uns nicht vorab zwecks Beitritt bei Euch melden können."
+msgstr ""
 
 #. Default: The Cultural Commons Collecting Society is a project of:
 #: c3sintent/templates/disclaimer.pt:37
 msgid "disclaimer-paragraph-4"
-msgstr "Die Cultural Commons Collecting Society ist ein Projekt von:"
+msgstr ""
 
 #. Default: Authorised to represent:
 #: c3sintent/templates/disclaimer.pt:48
 msgid "disclaimer-paragraph-5"
-msgstr "Vertretungsberechtigt:"
+msgstr ""
 
 #. Default: imprint of the OpenMusicContest.org e.V.
 #: c3sintent/templates/disclaimer.pt:61
 msgid "OMC-imprint-link-title"
-msgstr "Impressum des OpenMusicContest.org e.V."
+msgstr ""
 
 #. Default: See the ${OMC-imprint-link-title} for more information.
 #: c3sintent/templates/disclaimer.pt:60
 msgid "disclaimer-paragraph-6"
-msgstr "Siehe ${OMC-imprint-link-title}  für mehr Informationen."
+msgstr ""
 
 #. Default: After submitting the form below, you will be presented with a PDF
 #. download (~90 KB) with your data filled in. Please print out at least the
@@ -331,7 +330,7 @@ msgstr "Siehe ${OMC-imprint-link-title}  für mehr Informationen."
 #. wait for your signature to make it valid!
 #: c3sintent/templates/intent.pt:33
 msgid "intent-form-note"
-msgstr "Nach dem Absenden des Formulars wird ein PDF (~90 KB) geladen, welches die eingegebenen Daten enthält. Bitte mindestens die zweite und dritte Seite ausdrucken. Lest sie noch einmal aufmerksam durch - und vergesst nicht zu unterschreiben! Dann beide (!) Seiten entweder als Scan oder ausgedruckt senden an die C3S. Die Adressen finden sich auf der ersten Seite. Wir werden automatisiert eine verschlüsselte Email mit den Daten erhalten -- und dann werden wir auf die Unterschrift warten, um die Erklärung gültig zu machen!"
+msgstr ""
 
 #. Default: When we submit our application for approval as a collecting
 #. society at
@@ -342,7 +341,7 @@ msgstr "Nach dem Absenden des Formulars wird ein PDF (~90 KB) geladen, welches d
 #. assistance.
 #: c3sintent/templates/intent.pt:37
 msgid "intent-form-intro-1"
-msgstr "Bei Antragstellung zur Zulassung als Verwertungsgesellschaft müssen wir belegen können, wie hoch die Unterstützung und Akzeptanz bei Aufnahme des Geschäftsbetriebs sein wird. Hier helfen keine Facebook-Follower. Wir benötigen etwas mehr."
+msgstr ""
 
 #. Default: If you are willing to become a member of C3S after its foundation
 #. and
@@ -351,7 +350,7 @@ msgstr "Bei Antragstellung zur Zulassung als Verwertungsgesellschaft müssen wir
 #. Office.
 #: c3sintent/templates/intent.pt:40
 msgid "intent-form-intro-2"
-msgstr "Wenn Ihr bereit seid, der C3s nach ihrer Gründung als Mitglied beizutreten und die kommerzielle Verwertung einiger oder aller Eurer Werke der C3S zu übertragen, dann könnt Ihr diese Absicht dem Deutschen Patent- und Markenamt nun mitteilen."
+msgstr ""
 
 #. Default: You are allowed to currently be a member of a different collecting
 #. society – a transfer is possible, even if it may be a lengthy process. At
@@ -361,7 +360,7 @@ msgstr "Wenn Ihr bereit seid, der C3s nach ihrer Gründung als Mitglied beizutre
 #. new C3S. Your signature does not constitute a binding agreement to join.
 #: c3sintent/templates/intent.pt:43
 msgid "intent-form-intro-3"
-msgstr "Wenn Ihr bereit seid, der C3S nach ihrer Gründung als Mitglied beizutreten und die kommerzielle Verwertung einiger oder aller Eurer Werke der C3S zu übertragen, dann könnt Ihr diese Absicht dem Deutschen Patent- und Markenamt nun mitteilen. Ihr dürft durchaus bereits Mitglied einer anderen Verwertungsgesellschaft sein – denn ein Wechsel ist möglich, wenn auch langwierig. Außerdem bestätigt Ihr lediglich, dass Ihr eine Mitgliedschaft in der neuen C3S ernsthaft in Erwägung zieht – Ihr verpflichtet Euch mit Eurer Unterschrift noch nicht verbindlich zum Beitritt."
+msgstr ""
 
 #. Default: You have to be a composer, lyricist, musician, music producer,
 #. remixer
@@ -377,7 +376,7 @@ msgstr "Wenn Ihr bereit seid, der C3S nach ihrer Gründung als Mitglied beizutre
 #. mashups.
 #: c3sintent/templates/intent.pt:46
 msgid "intent-form-intro-4"
-msgstr "Ihr müsst Komponist(in), Texter(in), Musiker(in), Musikproduzent(in), Remixer(in) oder DJ sein und bereits mindestens drei eigene Tracks geschrieben oder andere gemixt haben. Im Ergebnis müsst Ihr also wenigstens Miturheber(in) von drei verschiedenen Musikwerken sein. Wir freuen uns über Profis und Semi-Pros, aber auch Hobby-Musiker(innen) und angehende Kreative finden in der C3S ihr Zuhause – auch wenn Ihr gerade erst Eure ersten Remixes und Mashups zusammengestellt habt. "
+msgstr ""
 
 #. Default: After C3S has been founded, we will use your data to ask you
 #. whether
@@ -388,7 +387,7 @@ msgstr "Ihr müsst Komponist(in), Texter(in), Musiker(in), Musikproduzent(in), R
 #. you wish to withdraw your declaration.
 #: c3sintent/templates/intent.pt:49
 msgid "intent-form-intro-5"
-msgstr "Nach Gründung der C3S nutzen wir Eure Angaben, um Euch zu fragen, ob Ihr dann tatsächlich beitreten möchtet. Wenn nicht, wird Eure Erklärung gelöscht. Sie wird ebenfalls gelöscht, wenn Ihr Eure Absichtserklärung überdenkt und zurückziehen möchtet und uns das schriftlich mitteilt."
+msgstr ""
 
 #. Default: In order to prevent falsifications, we will ask you not only for
 #. your
@@ -405,7 +404,7 @@ msgstr "Nach Gründung der C3S nutzen wir Eure Angaben, um Euch zu fragen, ob Ih
 #. Protection Act.
 #: c3sintent/templates/intent.pt:52
 msgid "intent-form-intro-6"
-msgstr "Um Verfälschungen vorzubeugen, fragen wir – wie bei einer Petition – neben Eurem Namen auch Eure Postanschrift und E-Mail-Adresse ab. Selbstverständlich werden diese Daten außer bei der Antragstellung (an das Deutsche Patent- und Markenamt) weder an Dritte weitergegeben noch zu anderen Zwecken verwendet oder gar veröffentlicht. Die Speicherung erfolgt in Deutschland und entsprechend den Vorgaben des Bundesdatenschutzgesetzes durch den OpenMusicContest.org e.V. als Vertreter der C3S-Gründungsinitiative. "
+msgstr ""
 
 #. Default: By sending an email to data@c3s.cc you may order your data to be
 #. deleted at any time, and without giving reasons. Upon request to the same
@@ -419,24 +418,24 @@ msgstr "Um Verfälschungen vorzubeugen, fragen wir – wie bei einer Petition �
 #. separately on our website:
 #: c3sintent/templates/intent.pt:55
 msgid "intent-form-intro-7"
-msgstr "Ihr könnt jederzeit und ohne Angabe von Gründen durch E-Mail an data@c3s.cc die Löschung Eurer bei uns gespeicherten Daten erreichen und durch eine Anfrage an diese Adresse auch Auskunft über die über Euch gespeicherten Daten verlangen. Eine Löschung bewirkt natürlich zugleich, dass wir uns nicht vorab zwecks Beitritt bei Euch melden können. Diese Details zum Umgang mit Euren Daten (Datenschutzerklärung) könnt Ihr auch separat auf unserer Website abrufen unter "
+msgstr ""
 
 #. Default: Disclaimer (Data Protection)
 #: c3sintent/templates/intent.pt:59
 msgid "intent-form-disclaimer-title"
-msgstr "Datenschutzerklärung"
+msgstr ""
 
 #. Default: information about C3S
 #: c3sintent/templates/intent.pt:64
 msgid "information_about_C3S"
-msgstr "Informationen über die C3S"
+msgstr "information om C3S"
 
 #. Default: At first, please get ${information_about_C3S} and its aims, and
 #. then we
 #. can get going!
 #: c3sintent/templates/intent.pt:63
 msgid "intent-form-reading-instructions"
-msgstr "Bitte besorgt Euch zunächst ${information_about_C3S} und Ihre Ziele, dann kann's losgehen!"
+msgstr ""
 
 #. Default: all
 #: c3sintent/templates/intent.pt:69
@@ -446,4 +445,4 @@ msgstr "alle"
 #. Default: Please answer ${all} questions:
 #: c3sintent/templates/intent.pt:68
 msgid "intent-form-answer-all"
-msgstr "Bitte beantwortet ${all} Fragen:"
+msgstr ""

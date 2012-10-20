@@ -10,14 +10,16 @@
   </tal:block>
   <tal:block metal:fill-slot="bottom">
     <div style="text-align:right;">
-      <a href="/disclaimer?_LOCALE_=en"><img src="static/images/en.png" title="English"
+      <a href="/disclaimer?en"><img src="static/images/en.png" title="English"
 				   alt="switch to English language" /></a>
-      <a href="/disclaimer?_LOCALE_=de"><img src="static/images/de.png" title="Deutsch"
+      <a href="/disclaimer?de"><img src="static/images/de.png" title="Deutsch"
 				   alt="auf deutsche Sprache umschalten" /></a>
-      <a href="/disclaimer?_LOCALE_=es"><img src="static/images/es.png" title="Espanol"
+      <a href="/disclaimer?es"><img src="static/images/es.png" title="Espanol"
 				   alt="Espanol" /></a>
-      <a href="/disclaimer?_LOCALE_=fr"><img src="static/images/fr.png" title="Francais"
+      <a href="/disclaimer?fr"><img src="static/images/fr.png" title="Francais"
 				   alt="Francais" /></a>
+      <a href="/disclaimer?da"><img src="static/images/dk.png" title="Dansk"
+				   alt="Dansk" /></a>
     </div>
     <p i18n:translate="disclaimer-paragraph-1">
       After it has been founded, we will use the data you have provided in the declaration of intent to join the Cultural Commons Collecting Society (C3S) in order to ask you whether you really want to become a member. If not, your declaration will be deleted. It will also be deleted if you have second thoughts and notify us in writing that you wish to withdraw your declaration.

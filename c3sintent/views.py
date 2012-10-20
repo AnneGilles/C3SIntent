@@ -7,10 +7,7 @@ from c3sintent.utils import (
 from pkg_resources import resource_filename
 import colander
 import deform
-from deform import (
-    ValidationFailure,
-    #ZPTRendererFactory,
-    )
+from deform import ValidationFailure
 
 from pyramid.i18n import (
     #TranslationStringFactory,
@@ -20,6 +17,7 @@ from pyramid.i18n import (
 from pyramid.view import view_config
 from pyramid.threadlocal import get_current_request
 from pyramid_mailer import get_mailer
+from pyramid.httpexceptions import HTTPFound
 
 from translationstring import TranslationStringFactory
 
@@ -54,35 +52,75 @@ DEBUG = False
              route_name='disclaimer')
 def show_disclaimer(request):
 
-    locale_name = get_locale_name(request)
-    # check if user clicked on language symbol to have page translated
-    #print("request.query_string: " + str(request.query_string))
-    from pyramid.httpexceptions import HTTPFound
-    if (request.query_string == '_LOCALE_=%s' % (locale_name)) or (
-        request.query_string == 'lang=%s' % (locale_name)):
-        # set language cookie
-        request.response.set_cookie('_LOCALE_', locale_name)
+    if hasattr(request, '_REDIRECT_'):
+        #from pyramid.httpdexceptions import HTTPFound
         return HTTPFound(location=request.route_url('disclaimer'),
                          headers=request.response.headers)
+#    locale_name = get_locale_name(request)
+    # check if user clicked on language symbol to have page translated
 
-    return {'foo': 'bar'}
+#    if (request.query_string == '_LOCALE_=%s' % (locale_name)) or (
+#        request.query_string == 'l=%s' % (locale_name)):
+        # set language cookie
+#        request.response.set_cookie('_LOCALE_', locale_name)
+#        return HTTPFound(location=request.route_url('disclaimer'),
+#                         headers=request.response.headers)
+
+    return {'foo': 'bar'}  # dummy values: template contains all text
 
 
 @view_config(renderer='templates/intent.pt',
              route_name='intent')
 def declare_intent(request):
 
-    locale_name = get_locale_name(request)
+    # if another language was chosen by clicking on a flag
+    # the add_locale_to_cookie subscriber has planted an attr on the request
+    if hasattr(request, '_REDIRECT_'):
+        #print("request._REDIRECT_: " + str(request._REDIRECT_))
 
-    # check if user clicked on language symbol to have page translated
-    #print("request.query_string: " + str(request.query_string))
-    from pyramid.httpexceptions import HTTPFound
-    if (request.query_string == '_LOCALE_=%s' % (locale_name)) or (
-        request.query_string == 'lang=%s' % (locale_name)):
+        _query = request._REDIRECT_
+        #print("_query: " + _query)
         # set language cookie
-        request.response.set_cookie('_LOCALE_', locale_name)
+        request.response.set_cookie('_LOCALE_', _query)
+        request._LOCALE_ = _query
+        locale_name = _query
+        #print("locale_name (from query_string): " + locale_name)
+        from pyramid.httpexceptions import HTTPFound
+        #print("XXXXXXXXXXXXXXX ==> REDIRECTING ")
         return HTTPFound(location=request.route_url('intent'),
                          headers=request.response.headers)
+    # # if another language was chosen, pick it
+    # if request._REDIRECT_ is not '':
+    #     print("request.query_string: " + str(request.query_string))
+    #     _query = request.query_string
+    #     print("_query: " + _query)
+    #     # set language cookie
+    #     request.response.set_cookie('_LOCALE_', _query)
+    #     request._LOCALE_ = _query
+    #     locale_name = _query
+    #     print("locale_name (from query_string): " + locale_name)
+    #     from pyramid.httpexceptions import HTTPFound
+    #     print("XXXXXXXXXXXXXXX ==> REDIRECTING ")
+    #     return HTTPFound(location=request.route_url('intent'),
+    #                      headers=request.response.headers)
+    else:
+        #locale_name = request._LOCALE_
+        locale_name = get_locale_name(request)
+        #print("locale_name (from request): " + locale_name)
+
+    # check if user clicked on language symbol to have page translated
+    # #print("request.query_string: " + str(request.query_string))
+    # if 'l' in request.query_string:
+    #     print("request.query_string: " + str(request.query_string))
+    #     print("request.query_string[0]: " + str(request.query_string[0]))
+
+    # from pyramid.httpexceptions import HTTPFound
+    # if (request.query_string == '_LOCALE_=%s' % (locale_name)) or (
+    #     request.query_string == 'l=%s' % (locale_name)):
+    #     # set language cookie
+    #     request.response.set_cookie('_LOCALE_', locale_name)
+    #     return HTTPFound(location=request.route_url('intent'),
+    #                      headers=request.response.headers)
 
     if DEBUG:  # pragma: no cover
         print "-- locale_name: " + str(locale_name)
@@ -121,6 +159,7 @@ def declare_intent(request):
    # set default of Country select widget according to locale
     LOCALE_COUNTRY_MAPPING = {
         'de': 'DE',
+        'da': 'DK',
         'en': 'GB',
         'es': 'ES',
         'fr': 'FR',

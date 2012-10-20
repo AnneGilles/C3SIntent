@@ -43,10 +43,10 @@
 	 href="https://www.transifex.com/projects/p/C3Sintent/resource/POT/"
 	 title="Want more langages? Help us translate on Transifex.com">
 	<img border="0" alt="image shows languages and percentages translated"
-	     src="https://www.transifex.com/projects/p/C3Sintent/resource/POT/chart/image_png"
+	     src="static/C3Sintent-transifex-languages.png"
 	     style="vertical-align: middle;" />  &nbsp; &nbsp;
 	<img border="0" alt="transifex.com logo"
-	     src="https://ds0k0en9abmn1.cloudfront.net/static/charts/images/tx-logo-micro.646b0065fce6.png"
+	     src="static/transifex-logo.png"
 	     style="vertical-align: middle;" />
       </a>
     </div>

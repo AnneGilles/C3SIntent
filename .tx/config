@@ -6,6 +6,7 @@ file_filter = translations/C3Sintent.POT/<lang>.po
 source_file = c3sintent/locale/C3Sintent.pot
 source_lang = en
 trans.de = c3sintent/locale/de/LC_MESSAGES/C3Sintent.po
+trans.da = c3sintent/locale/da/LC_MESSAGES/C3Sintent.po
 trans.es = c3sintent/locale/es/LC_MESSAGES/C3Sintent.po
 trans.fr = c3sintent/locale/fr/LC_MESSAGES/C3Sintent.po
 type = PO
